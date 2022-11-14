@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{47165A11-40AF-4831-819B-5A5F74354B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{B73DF057-105D-424E-8904-54B7CA36FD08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47165A11-40AF-4831-819B-5A5F74354B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47165A11-40AF-4831-819B-5A5F74354B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47165A11-40AF-4831-819B-5A5F74354B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47165A11-40AF-4831-819B-5A5F74354B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73DF057-105D-424E-8904-54B7CA36FD08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73DF057-105D-424E-8904-54B7CA36FD08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73DF057-105D-424E-8904-54B7CA36FD08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73DF057-105D-424E-8904-54B7CA36FD08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

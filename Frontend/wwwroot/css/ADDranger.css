@@ -1,0 +1,187 @@
+.wrapper{
+    width: 380px;
+    background: #fff;
+    border-radius: 5px;
+}
+.wrapper .bx-user{
+    background: rgb(206, 116, 116);
+    line-height: 80px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper h1{
+    text-align: center;
+    margin: 3%;
+}
+
+.wrapper form .FName-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .FName-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .FName-textbox input:focus{
+    border-bottom-width: 2px;
+}
+
+.wrapper form .LName-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .LName-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .LName-textbox input:focus{
+    border-bottom-width: 2px;
+}
+
+.wrapper form .MidInitials-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .MidInitials-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .MidInitials-textbox input:focus{
+    border-bottom-width: 2px;
+}
+
+.wrapper form .EMail-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .EMail-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .EMail-textbox input:focus{
+    border-bottom-width: 2px;
+}
+
+.wrapper form .TelNum-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .TelNum-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .TelNum-textbox input:focus{
+    border-bottom-width: 2px;
+}
+
+.wrapper form .Username-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .Username-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .Username-textbox input:focus{
+    border-bottom-width: 2px;
+}
+
+.wrapper form .Password-textbox{
+    height: 80px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+.wrapper form .Password-textbox input{
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .Password-textbox input:focus{
+    border-bottom-width: 2px;
+}
