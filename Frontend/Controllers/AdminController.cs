@@ -15,7 +15,11 @@ public class AdminController : Controller
     {
         _logger = logger;
     }
-    
+    public IActionResult Index()
+    {
+        return View();
+    }
+
     public IActionResult AddRanger()
     {
         return View();

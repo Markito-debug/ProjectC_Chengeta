@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Testapplication1.Database.Notification>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+   
+</head>
+<body>
+    <h2>The last 10 Notifications that came in</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NodeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sound_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Probability)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NodeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sound_Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Probability)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</body>

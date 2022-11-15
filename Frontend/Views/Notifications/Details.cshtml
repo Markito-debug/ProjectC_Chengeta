@@ -1,7 +1,7 @@
-﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model Testapplication1.Views.Home.Notification
-@{
+﻿@model Testapplication1.Database.Notification
 
+@{
+    ViewData["Title"] = "Details";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -18,41 +18,43 @@
     <title>Notifications</title>
 </head>
 <body>
-    
-    <div class="wrapper">
-        <!-- <i class=""></i> -->
-        <i class="bx bx-alarm-exclamation"></i>
-        <form action="#">
-            <h1>Location</h1>
-            <div class="container-fluid">
-                <iframe class="well well-sm col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314924.2082984722!2d4.210647798207174!3d51.92765354017547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2sRotterdam!5e0!3m2!1sen!2snl!4v1666347054157!5m2!1sen!2snl" 
-                 height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            <h1>Date and Time</h1>
-            <div class="label-text">
-                <label for="">
-                    @ViewBag.Time
-                </label>
-            </div>
-            <h1>Soundtype</h1>
-            <div class="label-text">
-                <label for="">
-                    @ViewBag.Sound_Type
-                </label>
-            </div>
-            <h1>Certainty</h1>
-            <div class="label-text">
-                <label for="">
-                    @ViewBag.Probability
-                </label>
-            </div>
+    <h1>Notification</h1>
+
+    <div>
+        <hr/>
+        <h1>Location</h1>
+        <div class="container-fluid">
+            <iframe class="well well-sm col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314924.2082984722!2d4.210647798207174!3d51.92765354017547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2sRotterdam!5e0!3m2!1sen!2snl!4v1666347054157!5m2!1sen!2snl" 
+             height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <dl class="row">
+            <dt class="col-sm-2">
+                <h1>Date and Time</h1>
+            </dt>
+            <dd class="col-sm-10">
+                <h2>@Html.DisplayFor(model => model.Time)</h2>
+            </dd>
+            <dt class="col-sm-2">
+                <h1>Soundtype</h1>
+            </dt>
+            <dd class="col-sm-10">
+                <h2>@Html.DisplayFor(model => model.Sound_Type)</h2>
+            </dd>
+            <dt class="col-sm-2">
+                <h1>Certainty</h1>
+            </dt>
+            <dd class="col-sm-10">
+                <h2>@Html.DisplayFor(model => model.Probability)</h2>
+            </dd>
+        </dl>
+        <div>
             <h1>Soundclip</h1>
             <div class="label-text">
                 <audio controls>
-                        <source src="@ViewBag.Sound" type="audio/wav" />
-                      Your browser does not support the audio element.
-                    </audio>
+                    <source src="@ViewBag.Sound" type="audio/wav"/>
+                    Your browser does not support the audio element.
+                </audio>
             </div>
             <h1>Status</h1>
             <div class="checkbox">
@@ -79,8 +81,10 @@
             <div class="notes-textbox">
                 <input type="text" placeholder="Type here">
             </div>
-        </form>
+        </div>
     </div>
-    
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
 </body>
-</html>

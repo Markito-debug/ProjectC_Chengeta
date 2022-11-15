@@ -24,26 +24,6 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult NotificationInfo()
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=1109;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
-        {
-            var getNotif = (from n in context.Notifs
-                select n).ToList();
-            
-            Random rnd = new Random();
-            int index = rnd.Next(getNotif.Count());
-            
-            ViewBag.Time = getNotif[index].Time;
-            ViewBag.Sound_Type = getNotif[index].Sound_Type;
-            ViewBag.Probability = getNotif[index].Probability;
-            ViewBag.Sound = getNotif[index].Sound;            
-        }
-
-        return View();
-    }
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
