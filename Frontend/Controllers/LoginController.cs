@@ -16,11 +16,11 @@ namespace Testapplication1.Controllers
 
             if (UserDAO.FindUser(model)=="Admin")
             {
-                return View("standinAdmin");
+                return RedirectToAction("Index", "Admin");
             } 
             else if (UserDAO.FindUser(model) == "Ranger")
             {
-                return View("standinRanger");
+                return RedirectToAction("Index", "Notifications");
             }
             else
             {
