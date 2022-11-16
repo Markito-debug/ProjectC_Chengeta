@@ -1,12 +1,7 @@
-﻿@page
-@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model Testapplication1.Views.AddRanger
-
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-
+    ViewData["Title"] = "Home Page";
 }
-
-<!DOCTYPE html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +9,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/ADDranger.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="ADDranger.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>ADDranger</title>
+    
+    <style>
+        .button1 {
+            border: 2px solid rgb(206, 116, 116);
+            background-color: rgb(206, 116, 116);
+            border-radius: 5px;
+            border-left-width: 8px;
+            border-right-width: 8px;
+            margin-top: 5px;
+            margin-left: 5px;
+            color: #fff;
+            font-size: 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
         <i class='bx bx-user'></i>
         <form action="#">
+            <div class="bck_button">
+                <input type="button" value="Back">
+            </div>
             <h1>First Name</h1>
             <div class="FName-textbox">
                 <input type="text" placeholder="First Name">
@@ -53,6 +65,9 @@
             <h1>Password</h1>
             <div class="Password-textbox">
                 <input type="text" placeholder="Password">
+            </div>
+            <div class="row button">
+                <input type="button" value="Save">
             </div>
         </form>
     </div>

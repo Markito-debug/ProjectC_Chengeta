@@ -5,7 +5,7 @@ namespace Testapplication1.Views.Services;
 
 public class UserDAO
 {
-    public static bool FindUser(Rangers ranger)
+    public static string FindUser(Rangers ranger)
     {
         var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
         optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta");
@@ -17,11 +17,18 @@ public class UserDAO
                 select r).FirstOrDefault();
             if (rangerFound == null)
             {
-                return false;
+                return "null";
             }
             else
             {
-                return true;
+                if (rangerFound.IsAdmin == true)
+                {
+                    return "Admin";
+                }
+                else
+                {
+                    return "Ranger";
+                }
             }
         }
 

@@ -13,17 +13,19 @@ namespace Testapplication1.Controllers
 
         public IActionResult ProcessLogin(Rangers model)
         {
-            SecurityService security= new SecurityService();
 
-            if (security.IsValid(model))
+            if (UserDAO.FindUser(model)=="Admin")
             {
-                return View("standin");
+                return View("standinAdmin");
             } 
+            else if (UserDAO.FindUser(model) == "Ranger")
+            {
+                return View("standinRanger");
+            }
             else
             {
                 return View("LoginFailure", model);
             }
-            
         }
     }
 }

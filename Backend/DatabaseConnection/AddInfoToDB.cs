@@ -50,6 +50,18 @@ namespace Mqttlistener
             dbContext.SaveChanges();
             Console.WriteLine("Done adding new notif");
         }
+
+        public static void AddRangers()
+        {
+            var dbContext = new ListenerDb();
+            dbContext.Ranger.Add(new Rangers(Guid.NewGuid(), "Bob Ninja", "Ranger1", "R@nger1", 123456789,
+                "bobninja@mail.com", false));
+            dbContext.Ranger.Add(new Rangers(Guid.NewGuid(), "Rob Ninja", "Admin1", "@dmin1", 123456788,
+                "bobninja@mail.com", true));
+
+            dbContext.SaveChanges();
+            Console.WriteLine("Added rangers");
+        }
     }
 
 

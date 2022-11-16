@@ -12,20 +12,16 @@
     text-align: center;
     color: #fff;
 }
-
 .wrapper h1{
     text-align: center;
     margin: 3%;
 }
-
 .wrapper form .FName-textbox{
     height: 80px;
-    /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .FName-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -37,19 +33,15 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .FName-textbox input:focus{
     border-bottom-width: 2px;
 }
-
 .wrapper form .LName-textbox{
     height: 80px;
-    /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .LName-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -61,19 +53,15 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .LName-textbox input:focus{
     border-bottom-width: 2px;
 }
-
 .wrapper form .MidInitials-textbox{
     height: 80px;
-    /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .MidInitials-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -85,19 +73,15 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .MidInitials-textbox input:focus{
     border-bottom-width: 2px;
 }
-
 .wrapper form .EMail-textbox{
     height: 80px;
-    /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .EMail-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -109,11 +93,9 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .EMail-textbox input:focus{
     border-bottom-width: 2px;
 }
-
 .wrapper form .TelNum-textbox{
     height: 80px;
     /* background: #ff000f; */
@@ -121,7 +103,6 @@
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .TelNum-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -133,11 +114,9 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .TelNum-textbox input:focus{
     border-bottom-width: 2px;
 }
-
 .wrapper form .Username-textbox{
     height: 80px;
     /* background: #ff000f; */
@@ -145,7 +124,6 @@
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .Username-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -157,11 +135,9 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .Username-textbox input:focus{
     border-bottom-width: 2px;
 }
-
 .wrapper form .Password-textbox{
     height: 80px;
     /* background: #ff000f; */
@@ -169,7 +145,6 @@
     margin: 20px;
     position: relative;
 }
-
 .wrapper form .Password-textbox input{
     border-radius: 5px;
     background: blanchedalmond;
@@ -181,7 +156,112 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-
 .wrapper form .Password-textbox input:focus{
     border-bottom-width: 2px;
+}
+
+
+.wrapper form button{
+    padding: 30px 20px 25px 20px;
+}
+.wrapper form .row{
+    color: #fff;
+    text-decoration-color: #fff;
+    height: 45px;
+    /* background: #ff000f; */
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+.wrapper form .row input{
+    border-radius: 5px;
+    background: rgb(206, 116, 116);  
+    color: #fff; 
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+.wrapper form .row input:focus{
+    border-bottom-width: 2px;
+    color: #fff;
+}
+.wrapper form .row .eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgb(206, 116, 116);
+    cursor: pointer;
+    padding: 5px;
+}
+.wrapper form .row .eye-icon:hover{
+    color: rgb(228, 144, 144);
+}
+/* .wrapper form .row input[type=submit]{
+    background: rgb(206, 116, 116);
+    color: #fff;
+    height: 100%;
+    width: 100%;  
+    font-weight: 500;
+    padding-left: 0px;
+    font-size: 15px;
+} */
+
+.wrapper form .bck_button{
+    /* background: rgb(206, 116, 116); */
+    color: #fff;
+    height: 100%;
+    width: 100%;  
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.wrapper form .bck_button input{
+    border-radius: 5px;
+    background: rgb(206, 116, 116);  
+    color: #fff; 
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 12px;
+}
+
+
+
+.wrapper form .button input:hover{
+    background: rgb(228, 144, 144);
+}
+.wrapper form .pass{
+    margin: 0 0 15px 0;
+}
+.wrapper form .pass a{
+    text-decoration: none;
+    color: rgb(206, 116, 116);
+    font-weight: 500;
+}
+.wrapper form .pass a:hover{
+    text-decoration: underline;
+}
+
+
+.wrapper form .bck_button input:hover{
+    background: rgb(228, 144, 144);
+}
+.wrapper form .pass{
+    margin: 0 0 15px 0;
+}
+.wrapper form .pass a{
+    text-decoration: none;
+    color: rgb(206, 116, 116);
+    font-weight: 500;
+}
+.wrapper form .pass a:hover{
+    text-decoration: underline;
 }

@@ -60,8 +60,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/standin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN0YW5kaW4uY3NodG1s
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/standinAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN0YW5kaW5BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/standinRanger.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN0YW5kaW5SYW5nZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/_ValidationScriptsPartial.cshtml]
