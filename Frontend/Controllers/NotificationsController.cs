@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Testapplication1.Database;
+using Testapplication1.Views.Notifications;
 
 namespace Testapplication1.Controllers
 {
@@ -46,6 +47,12 @@ namespace Testapplication1.Controllers
 
             }
 
+        }
+
+        public IActionResult SaveNotification(Guid id)
+        {
+            SaveNotif.SavedNotification(id);
+            return View("SaveNotification");
         }
     }
 }

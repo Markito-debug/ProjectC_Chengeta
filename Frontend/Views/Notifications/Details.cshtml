@@ -1,4 +1,5 @@
-﻿@model Testapplication1.Database.Notification
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Testapplication1.Database.Notification
 
 @{
     ViewData["Title"] = "Details";
@@ -19,7 +20,9 @@
 </head>
 <body>
     <h1>Notification</h1>
-
+    <div class="bck_button">
+        <input type="button" value="Save Notification" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
+    </div>
     <div>
         <hr/>
         <h1>Location</h1>

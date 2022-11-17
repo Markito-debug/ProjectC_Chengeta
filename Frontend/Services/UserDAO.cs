@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Testapplication1.Database;
-using Testapplication1.Models;
-namespace Testapplication1.Views.Services;
+
+namespace Testapplication1.Services;
 
 public class UserDAO
 {

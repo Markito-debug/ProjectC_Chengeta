@@ -170,6 +170,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "PdfSharp": {
+              "target": "Package",
+              "version": "[1.51.5185-beta, )"
             }
           },
           "imports": [
