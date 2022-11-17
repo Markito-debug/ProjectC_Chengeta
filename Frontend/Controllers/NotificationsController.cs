@@ -7,8 +7,6 @@ namespace Testapplication1.Controllers
 {
     public class NotificationsController : Controller
     {
-
-        // GET: Notifications
         public IActionResult Index()
         {
             var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
@@ -23,7 +21,6 @@ namespace Testapplication1.Controllers
 
         }
 
-        // GET: Notifications/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
@@ -52,7 +49,7 @@ namespace Testapplication1.Controllers
         public IActionResult SaveNotification(Guid id)
         {
             SaveNotif.SavedNotification(id);
-            return View("SaveNotification");
+            return RedirectToAction("Index", "Notifications");
         }
     }
 }

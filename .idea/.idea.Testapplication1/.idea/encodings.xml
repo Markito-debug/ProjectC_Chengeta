@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise" />
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Frontend/0cb558bf-75e0-49a9-a746-8da14ffb192b" charset="US-ASCII" />
+  </component>
 </project>

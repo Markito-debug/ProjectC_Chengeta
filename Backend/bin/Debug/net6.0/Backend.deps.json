@@ -232,22 +232,19 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "Microsoft.Win32.SystemEvents/4.7.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0"
-        },
+      "Microsoft.Win32.SystemEvents/7.0.0": {
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.700.19.56404"
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.700.19.56404"
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -301,6 +298,26 @@
           "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "PDFsharp/1.51.5185-beta": {
+        "runtime": {
+          "lib/net20/PdfSharp.Charting.dll": {
+            "assemblyVersion": "1.51.5185.0",
+            "fileVersion": "1.51.5185.0"
+          },
+          "lib/net20/PdfSharp.dll": {
+            "assemblyVersion": "1.51.5185.0",
+            "fileVersion": "1.51.5185.0"
+          }
+        },
+        "resources": {
+          "lib/net20/de/PdfSharp.Charting.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net20/de/PdfSharp.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -386,29 +403,22 @@
           }
         }
       },
-      "System.Drawing.Common/4.7.0": {
+      "System.Drawing.Common/7.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
-          "Microsoft.Win32.SystemEvents": "4.7.0"
+          "Microsoft.Win32.SystemEvents": "7.0.0"
         },
         "runtime": {
-          "lib/netstandard2.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "4.0.0.1",
-            "fileVersion": "4.6.26919.2"
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "rid": "unix",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.700.19.56404"
-          },
-          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.700.19.56404"
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -481,7 +491,7 @@
       },
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
-          "System.Drawing.Common": "4.7.0"
+          "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
@@ -503,7 +513,9 @@
           "EntityFramework": "6.4.4",
           "M2Mqtt": "4.3.0",
           "MQTTnet": "4.1.3.436",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
+          "PDFsharp": "1.51.5185-beta",
+          "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
           "Frontend.dll": {}
@@ -671,12 +683,12 @@
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/4.7.0": {
+    "Microsoft.Win32.SystemEvents/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
-      "path": "microsoft.win32.systemevents/4.7.0",
-      "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
     },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
@@ -712,6 +724,13 @@
       "sha512": "sha512-CyUNlFZmtX2Kmw8XK5Tlx5eVUCzWJ+zJHErxZiMo2Y8zCRuH9+/OMGwG+9Mmp5zD5p3Ifbi5Pp3btsqoDDkSZQ==",
       "path": "npgsql.entityframeworkcore.postgresql/7.0.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512"
+    },
+    "PDFsharp/1.51.5185-beta": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7C81iAdD/X2JaVGlq49lswkPKnKrbvmgDFCz/DGaCBrvIydHWJxlFK696uhNLmjUOV8Bed6K/+Xy2V8cJp7Wiw==",
+      "path": "pdfsharp/1.51.5185-beta",
+      "hashPath": "pdfsharp.1.51.5185-beta.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
@@ -769,12 +788,12 @@
       "path": "system.data.sqlclient/4.8.1",
       "hashPath": "system.data.sqlclient.4.8.1.nupkg.sha512"
     },
-    "System.Drawing.Common/4.7.0": {
+    "System.Drawing.Common/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
-      "path": "system.drawing.common/4.7.0",
-      "hashPath": "system.drawing.common.4.7.0.nupkg.sha512"
+      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "path": "system.drawing.common/7.0.0",
+      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
