@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styleIndex.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-   
+    <style>
+    audio {
+     width: 100px;
+     height: 30px;
+    }
+    </style>
 </head>
 <body>
     <h2>The last 10 Notifications that came in</h2>
@@ -24,7 +28,7 @@
                 @Html.DisplayNameFor(model => model.Time)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NodeID)
+                @Html.DisplayNameFor(model => model.Sound)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Sound_Type)
@@ -42,7 +46,10 @@
                     @Html.DisplayFor(modelItem => item.Time)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.NodeID)
+                    <audio controls>
+                        <source src="@(item.Sound)" type="audio/wav"/>
+                        Your browser does not support the audio element.
+                    </audio>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Sound_Type)
@@ -51,7 +58,7 @@
                     @Html.DisplayFor(modelItem => item.Probability)
                 </td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Details" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.ID">Details</a>
                 </td>
             </tr>
         }

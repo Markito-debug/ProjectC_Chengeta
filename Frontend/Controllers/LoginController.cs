@@ -13,7 +13,6 @@ namespace Testapplication1.Controllers
 
         public IActionResult ProcessLogin(Rangers model)
         {
-
             if (UserDAO.FindUser(model)=="Admin")
             {
                 return RedirectToAction("Index", "Admin");
@@ -24,7 +23,7 @@ namespace Testapplication1.Controllers
             }
             else
             {
-                return View("LoginFailure", model);
+                return RedirectToAction("Index", "Login");
             }
         }
     }

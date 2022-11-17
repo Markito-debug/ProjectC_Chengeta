@@ -147,12 +147,12 @@ C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\ne
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\scopedcss\bundle\Frontend.styles.css
-C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\scopedcss\projectbundle\Frontend.bundle.scp.css
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\Frontend.csproj.CopyComplete
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\Frontend.dll
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\refint\Frontend.dll
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\Frontend.pdb
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\Frontend.genruntimeconfig.cache
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\ref\Frontend.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\obj\Debug\net6.0\scopedcss\projectbundle\Frontend.bundle.scp.css
