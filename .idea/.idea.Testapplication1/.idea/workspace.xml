@@ -11,20 +11,13 @@
   <component name="ChangeListManager">
     <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net6.0/Frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Notifications/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/ref/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/ref/Frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/refint/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/refint/Frontend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Services/SaveNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Services/SaveNotification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/SaveNotification.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/SaveNotification.cshtml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +44,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.Backend">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Frontend: IIS Express">
     <configuration name="Backend" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -123,6 +116,8 @@
       <workItem from="1668720888883" duration="454000" />
       <workItem from="1668761611038" duration="83000" />
       <workItem from="1668762190514" duration="2808000" />
+      <workItem from="1668775943585" duration="175000" />
+      <workItem from="1668777285096" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes to frontend">
       <created>1668594224848</created>
@@ -159,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668720699167</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="got Notification index to refresh when going back to it from details">
+      <created>1668776009185</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668776009185</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +187,7 @@
     <MESSAGE value="bye top bar, hello functional buttons, also did some layout things" />
     <MESSAGE value="not yet working saveNotification, Font reference issue" />
     <MESSAGE value="savePDF working" />
-    <option name="LAST_COMMIT_MESSAGE" value="savePDF working" />
+    <MESSAGE value="got Notification index to refresh when going back to it from details" />
+    <option name="LAST_COMMIT_MESSAGE" value="got Notification index to refresh when going back to it from details" />
   </component>
 </project>
