@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+@model Testapplication1.Database.Rangers
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,45 +32,56 @@
         }
     </style>
 </head>
-<body>
-    <div class="wrapper">
-        <i class='bx bx-user'></i>
-        <form action="#">
-            <div class="bck_button">
-                <input type="button" value="Back">
+
+
+
+<h4>Rangers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ProcessAddRanger">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RangerName" class="control-label"></label>
+                <input asp-for="RangerName" class="form-control" />
+                <span asp-validation-for="RangerName" class="text-danger"></span>
             </div>
-            <h1>First Name</h1>
-            <div class="FName-textbox">
-                <input type="text" placeholder="First Name">
+            <div class="form-group">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" />
+                <span asp-validation-for="Login" class="text-danger"></span>
             </div>
-            <h1>Last Name</h1>
-            <div class="LName-textbox">
-                <input type="text" placeholder="Last Name">
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" type="password"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <h1>Middle Initials</h1>
-            <div class="MidInitials-textbox">
-                <input type="text" placeholder="Middle Initials">
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            <h1>E-Mail</h1>
-            <div class="EMail-textbox">
-                <input type="text" placeholder="E-Mail">
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <h1>Phone Number</h1>
-            <div class="TelNum-textbox">
-                <input type="text" placeholder="Phone Number">
+            <div class="form-group">
+                <h4>Does this person need Admin rights?</h4>
+                <input type="checkbox" data-val="true" data-val-required="The IsAdmin field is required." id="IsAdmin" name="IsAdmin" value="true">
+                <input name="IsAdmin" type="hidden" value="false">
             </div>
-            <h1>Username</h1>
-            <div class="Username-textbox">
-                <input type="text" placeholder="Username">
-            </div>
-            <h1>Password</h1>
-            <div class="Password-textbox">
-                <input type="text" placeholder="Password">
-            </div>
-            <div class="row button">
-                <input type="button" value="Save">
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" style="background: rgb(206, 116, 116); color: #fff" />
             </div>
         </form>
     </div>
-</body>
-</html>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
