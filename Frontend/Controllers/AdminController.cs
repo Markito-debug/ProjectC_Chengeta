@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Testapplication1.Database;
 using Testapplication1.Models;
-
+using Testapplication1.Services;
 
 namespace Testapplication1.Controllers;
 
@@ -29,7 +29,12 @@ public class AdminController : Controller
         return View();
     }
     
-    
+
+    public IActionResult ProcessAddRanger(Rangers model)
+    {
+        UserDAO.AddUser(model);
+        return RedirectToAction("Index", "Admin");
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

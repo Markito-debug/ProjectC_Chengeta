@@ -22,6 +22,7 @@
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
       <PackageReference Include="PdfSharp" Version="1.51.5185-beta" />
       <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+      <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
     </ItemGroup>
 
     <ItemGroup>
