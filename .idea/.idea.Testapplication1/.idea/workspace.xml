@@ -12,12 +12,7 @@
     <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Services/SaveNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Services/SaveNotification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/SaveNotification.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/SaveNotification.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Services/UserDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Services/UserDAO.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +23,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HaljQgFgzeN5L5ueEDxA7pnhHB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -117,7 +116,10 @@
       <workItem from="1668761611038" duration="83000" />
       <workItem from="1668762190514" duration="2808000" />
       <workItem from="1668775943585" duration="175000" />
-      <workItem from="1668777285096" duration="298000" />
+      <workItem from="1668777285096" duration="750000" />
+      <workItem from="1668778297614" duration="177000" />
+      <workItem from="1668778862518" duration="319000" />
+      <workItem from="1668781184048" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes to frontend">
       <created>1668594224848</created>
@@ -181,6 +183,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="minor changes to frontend" />
     <MESSAGE value="properly linked pages" />
