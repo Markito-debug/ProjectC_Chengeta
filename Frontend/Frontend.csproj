@@ -30,8 +30,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="NewFolder1\" />
-      <Folder Include="NewFolder\" />
       <Folder Include="SavedPDF" />
     </ItemGroup>
 

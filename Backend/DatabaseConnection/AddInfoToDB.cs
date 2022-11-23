@@ -49,18 +49,6 @@ namespace Mqttlistener
             dbContext.SaveChanges();
             Console.WriteLine("Done adding new notif");
         }
-
-        public static void AddRangers()
-        {
-            var dbContext = new ListenerDb();
-            dbContext.Ranger.Add(new Rangers(Guid.NewGuid(), "Bob Ninja", "Ranger1", "R@nger1", 123456789,
-                "bobninja@mail.com", false));
-            dbContext.Ranger.Add(new Rangers(Guid.NewGuid(), "Rob Ninja", "Admin1", "@dmin1", 123456788,
-                "bobninja@mail.com", true));
-
-            dbContext.SaveChanges();
-            Console.WriteLine("Added rangers");
-        }
     }
 
 
@@ -76,10 +64,10 @@ namespace Mqttlistener
             string[] soundtype = DataSplit(dataSplit[4], '"');
             string[] probability = DataSplit(dataSplit[5], ' ');
             string[] soundStart = DataSplit(dataSplit[6], '"');
-            string[] soundEnd = dataSplit[6][3].Split('"');
+            string[] soundEnd = dataSplit[6][2].Split('"');
 
-            string Sound = soundStart[1] +":"+ dataSplit[6][2]+":" +soundEnd[0];
-            Console.WriteLine(Sound);
+            string Sound = soundStart[1] +soundEnd[0];
+
             string[] parsedData = {time[1], nodeid[1], latitude[1], longitude[1], soundtype[1], probability[1], Sound};
             return parsedData;
         }
