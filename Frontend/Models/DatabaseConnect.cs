@@ -53,7 +53,6 @@ public class DatabaseConnect : DbContext
     private static string GetEnvironmentVar()
     {
         var value = Environment.GetEnvironmentVariable("PW_SQL");
-            Console.WriteLine(value);
         if (value != null)
             
             return value;

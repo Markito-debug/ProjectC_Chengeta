@@ -5,80 +5,81 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Testapplication1
 build_property.RootNamespace = Testapplication1
-build_property.ProjectDir = C:\Users\Gebruiker\OneDrive\Documents\GitHub\ProjectC_renewed\Frontend\
+build_property.ProjectDir = C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Gebruiker\OneDrive\Documents\GitHub\ProjectC_renewed\Frontend
+build_property.MSBuildProjectDirectory = C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Admin/AddRanger.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Admin/AddRanger.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUmFuZ2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Admin/DeleteRanger.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Admin/DeleteRanger.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlUmFuZ2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Admin/Index.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Home/Index.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Home/Privacy.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Login/Index.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Login/LoginFailure.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Login/LoginFailure.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5GYWlsdXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Login/LoginSuccess.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Login/LoginSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5TdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Notifications/Details.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Notifications/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Notifications/Index.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Notifications/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Shared/Error.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Shared/standinAdmin.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/standinAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN0YW5kaW5BZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Shared/standinRanger.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/standinRanger.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN0YW5kaW5SYW5nZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/_ViewImports.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/_ViewStart.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gebruiker/OneDrive/Documents/GitHub/ProjectC_renewed/Frontend/Views/Shared/_Layout.cshtml]
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8fgarvx963

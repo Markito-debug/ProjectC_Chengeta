@@ -66,7 +66,7 @@ namespace Mqttlistener
             string[] soundStart = DataSplit(dataSplit[6], '"');
             string[] soundEnd = dataSplit[6][2].Split('"');
 
-            string Sound = soundStart[1] +soundEnd[0];
+            string Sound = soundStart[1] +":"+soundEnd[0];
 
             string[] parsedData = {time[1], nodeid[1], latitude[1], longitude[1], soundtype[1], probability[1], Sound};
             return parsedData;
