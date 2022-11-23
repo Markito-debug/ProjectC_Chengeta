@@ -69,7 +69,7 @@ namespace Mqttlistener
         protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
         {
             optionbuilder
-            .UseNpgsql(@"Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
+            .UseNpgsql(@"Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta");
         }
     }
 }

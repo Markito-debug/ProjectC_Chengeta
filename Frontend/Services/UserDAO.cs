@@ -14,9 +14,8 @@ public class UserDAO
 
     public static string FindUser(Rangers ranger)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
+
+        using (var context = new DatabaseConnect())
         {
             hashedPassword = ComputeSha256Hash(ranger.Password);
             var rangerFound = (from r in context.Ranger
@@ -42,9 +41,7 @@ public class UserDAO
     }
     public static void AddUser(Rangers ranger)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
+        using (var context = new DatabaseConnect())
         {
             hashedPassword = ComputeSha256Hash(ranger.Password);
             var newRanger = new Rangers(Guid.NewGuid(), ranger.RangerName, ranger.Login, hashedPassword, ranger.PhoneNumber, ranger.Email, ranger.IsAdmin);

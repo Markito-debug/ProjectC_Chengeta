@@ -19,10 +19,6 @@ public record ConnectionTable(Guid ID, Guid RangersID, Guid NotificationID)
 
 public class DatabaseConnect : DbContext
 {
-    public DatabaseConnect(DbContextOptions<DatabaseConnect> options) 
-        : base(options)
-    {
-    }
     
     public DbSet<Notification> Notifs { get; set; } = null!;
     public DbSet<Rangers> Ranger { get; set; } = null!;
@@ -45,5 +41,12 @@ public class DatabaseConnect : DbContext
             .HasOne(_ => _.Notif)
             .WithMany(_ => _.connectionTables)
             .HasForeignKey(_ => _.NotificationID);
+    }
+
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
+    {
+        optionbuilder
+        .UseNpgsql(@"Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta"); // System.Environment.GetEnvironmentVariable
     }
 }

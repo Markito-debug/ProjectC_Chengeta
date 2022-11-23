@@ -9,9 +9,8 @@ namespace Testapplication1.Controllers
     {
         public IActionResult Index()
         {
-            var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-            optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
-            using (var context = new DatabaseConnect(optionsBuilder.Options))
+
+            using (var context = new DatabaseConnect())
             {
                 var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
                 return recentNotifs != null ?
@@ -23,9 +22,7 @@ namespace Testapplication1.Controllers
 
         public async Task<IActionResult> Details(Guid? id)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-            optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
-            using (var context = new DatabaseConnect(optionsBuilder.Options))
+            using (var context = new DatabaseConnect())
             {
                 if (id == null || context.Notifs == null)
                 {

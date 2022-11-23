@@ -8,7 +8,7 @@ namespace Testapplication1.Views.Notifications;
 
 public class SaveNotif : PageModel
 {
-    public static string path = Path.GetFullPath("SavedPDF");
+    public static string path = Path.GetFullPath("Downloads");
     public static void SavedNotification(Guid id)
     {
         System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
@@ -21,9 +21,8 @@ public class SaveNotif : PageModel
         //lettertype
         XFont font = new XFont("Arial", 20);
         
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
+
+        using (var context = new DatabaseConnect())
         {
             var notifToSave = (from n in context.Notifs
                                             where n.ID == id
