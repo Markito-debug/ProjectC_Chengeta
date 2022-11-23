@@ -64,8 +64,6 @@ namespace Mqttlistener
             .HasForeignKey(_ => _.NotificationID);
         }
 
-
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
         {
             optionbuilder

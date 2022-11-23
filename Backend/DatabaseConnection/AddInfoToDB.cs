@@ -25,7 +25,6 @@ namespace Mqttlistener
                 double time = double.Parse(notif.Time);
                 DateTime date = epoch.AddSeconds(time).ToUniversalTime();
                 dbContext.Notifs.Add(new Notification(Guid.NewGuid(), date, notif.NodeID, notif.Latitude,notif.Longitude, notif.Sound_type, notif.Probability,notif.Sound ));
-                
             }
             dbContext.SaveChanges();
             Console.WriteLine("Done loading former data");
@@ -80,7 +79,7 @@ namespace Mqttlistener
             string[] soundEnd = dataSplit[6][3].Split('"');
 
             string Sound = soundStart[1] +":"+ dataSplit[6][2]+":" +soundEnd[0];
-
+            Console.WriteLine(Sound);
             string[] parsedData = {time[1], nodeid[1], latitude[1], longitude[1], soundtype[1], probability[1], Sound};
             return parsedData;
         }
