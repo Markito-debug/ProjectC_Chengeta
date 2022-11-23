@@ -67,7 +67,18 @@ namespace Mqttlistener
         protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
         {
             optionbuilder
-            .UseNpgsql(@"Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta");
+            .UseNpgsql(@$"Host=localhost:5432;Username=postgres;Password={GetEnvironmentVar()};Database=Chengeta");
+        }
+
+        private static string GetEnvironmentVar()
+        {
+            var value = Environment.GetEnvironmentVariable("PW_SQL");
+            Console.WriteLine(value);
+            if (value != null)
+
+                return value;
+            else
+                return "";
         }
     }
 }

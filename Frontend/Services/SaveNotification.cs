@@ -22,9 +22,7 @@ public class SaveNotif : PageModel
         //lettertype
         XFont font = new XFont("Arial", 20);
 
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
+        using (var context = new DatabaseConnect())
         {
             var notifToSave = (from n in context.Notifs
                 where n.ID == id

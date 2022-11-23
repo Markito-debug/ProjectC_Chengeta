@@ -47,6 +47,17 @@ public class DatabaseConnect : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
     {
         optionbuilder
-        .UseNpgsql(@"Host=localhost:5432;Username=postgres;Password=blub;Database=Chengeta"); // System.Environment.GetEnvironmentVariable
+        .UseNpgsql(@$"Host=localhost:5432;Username=postgres;Password={GetEnvironmentVar()};Database=Chengeta"); // System.Environment.GetEnvironmentVariable
+    }
+
+    private static string GetEnvironmentVar()
+    {
+        var value = Environment.GetEnvironmentVariable("PW_SQL");
+            Console.WriteLine(value);
+        if (value != null)
+            
+            return value;
+        else
+            return "";
     }
 }

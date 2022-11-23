@@ -44,7 +44,6 @@ namespace Mqttlistener
             var epoch = new DateTime(1970, 1, 1, 0, 0, 0);
             double time = double.Parse(parsedMsg[0]);
             DateTime date = epoch.AddSeconds(time).ToUniversalTime();
-
             dbContext.Notifs.Add(new Notification(Guid.NewGuid(), date, Int32.Parse(parsedMsg[1]), float.Parse(parsedMsg[2]), float.Parse(parsedMsg[3]), parsedMsg[4], Int32.Parse(parsedMsg[5]), parsedMsg[6]));
             dbContext.SaveChanges();
             Console.WriteLine("Done adding new notif");
@@ -76,7 +75,7 @@ namespace Mqttlistener
             string[] soundtype = DataSplit(dataSplit[4], '"');
             string[] probability = DataSplit(dataSplit[5], ' ');
             string[] soundStart = DataSplit(dataSplit[6], '"');
-            string[] soundEnd = dataSplit[6][3].Split('"');
+            string[] soundEnd = dataSplit[6][2].Split('"');
 
             string Sound = soundStart[1] +":"+ dataSplit[6][2]+":" +soundEnd[0];
             Console.WriteLine(Sound);
