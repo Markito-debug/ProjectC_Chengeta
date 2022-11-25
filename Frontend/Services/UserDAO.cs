@@ -39,6 +39,23 @@ public class UserDAO
             }
         }
     }
+
+    public static void FindAndDeleteUser(Guid? id)
+    {
+        using (var context = new DatabaseConnect())
+        {
+            var removeRanger = (from r in context.Ranger 
+                                where r.RangerID == id
+                                select r).FirstOrDefault(); 
+
+            if(removeRanger != null)
+            {
+                context.Ranger.Remove(removeRanger);
+                context.SaveChanges();
+            }
+        }
+    }
+    
     public static void AddUser(Rangers ranger)
     {
         using (var context = new DatabaseConnect())
@@ -49,6 +66,7 @@ public class UserDAO
             context.SaveChanges();
         }
     }
+    
     static string ComputeSha256Hash(string rawData)
     {
         // Create a SHA256   

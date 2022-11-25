@@ -2,7 +2,7 @@
 
 namespace Testapplication1.Database;
 
-public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin) { 
+public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin/*,bool LoggedIn*/) { 
     public List<ConnectionTable> connectionTables { get; set; } = null!;
 }
 

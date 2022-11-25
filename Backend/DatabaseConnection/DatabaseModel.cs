@@ -5,7 +5,7 @@ using Npgsql;
 namespace Mqttlistener
 {
     // This records are like Classes used for setting up a DB format
-    public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin) { 
+    public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin /*,bool LoggedIn*/) { 
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }
 
