@@ -1,10 +1,10 @@
-.wrapper{
+﻿.row {
     width: 380px;
     background: #fff;
     border-radius: 5px;
 }
-.wrapper .bx-user{
-    background: rgb(206, 116, 116);
+.row .bx-user {
+    background: rgb(26, 116, 116);
     line-height: 80px;
     width: 100%;
     border-radius: 5px 5px 0 0;
@@ -12,17 +12,20 @@
     text-align: center;
     color: #fff;
 }
-.wrapper h1{
+
+.row h1 {
     text-align: center;
     margin: 3%;
 }
-.wrapper form .FName-textbox{
+
+.row form .FName-textbox {
     height: 80px;
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-.wrapper form .FName-textbox input{
+
+.row form .FName-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -33,16 +36,19 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .FName-textbox input:focus{
+
+.row form .FName-textbox input:focus {
     border-bottom-width: 2px;
 }
-.wrapper form .LName-textbox{
+
+.row form .LName-textbox {
     height: 80px;
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-.wrapper form .LName-textbox input{
+
+.row form .LName-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -53,16 +59,19 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .LName-textbox input:focus{
+
+.row form .LName-textbox input:focus {
     border-bottom-width: 2px;
 }
-.wrapper form .MidInitials-textbox{
+
+.row form .MidInitials-textbox {
     height: 80px;
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
-}
-.wrapper form .MidInitials-textbox input{
+    }
+
+.row form .MidInitials-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -73,16 +82,19 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .MidInitials-textbox input:focus{
+
+.row form .MidInitials-textbox input:focus {
     border-bottom-width: 2px;
 }
-.wrapper form .EMail-textbox{
+
+.row form .EMail-textbox {
     height: 80px;
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-.wrapper form .EMail-textbox input{
+
+.row form .EMail-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -93,17 +105,20 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .EMail-textbox input:focus{
+
+.row form .EMail-textbox input:focus {
     border-bottom-width: 2px;
 }
-.wrapper form .TelNum-textbox{
+
+.row form .TelNum-textbox {
     height: 80px;
     /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-.wrapper form .TelNum-textbox input{
+
+.row form .TelNum-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -114,17 +129,20 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .TelNum-textbox input:focus{
+
+.row form .TelNum-textbox input:focus {
     border-bottom-width: 2px;
 }
-.wrapper form .Username-textbox{
+
+.row form .Username-textbox {
     height: 80px;
     /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-.wrapper form .Username-textbox input{
+
+.row form .Username-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -135,17 +153,20 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .Username-textbox input:focus{
+
+.row form .Username-textbox input:focus {
     border-bottom-width: 2px;
 }
-.wrapper form .Password-textbox{
+
+.row form .Password-textbox {
     height: 80px;
     /* background: #ff000f; */
     margin-bottom: 15px;
     margin: 20px;
     position: relative;
 }
-.wrapper form .Password-textbox input{
+
+.row form .Password-textbox input {
     border-radius: 5px;
     background: blanchedalmond;
     height: 100%;
@@ -156,15 +177,17 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .Password-textbox input:focus{
+
+.row form .Password-textbox input:focus {
     border-bottom-width: 2px;
 }
 
 
-.wrapper form button{
+.row form button {
     padding: 30px 20px 25px 20px;
 }
-.wrapper form .row{
+
+.row form .row {
     color: #fff;
     text-decoration-color: #fff;
     height: 45px;
@@ -174,10 +197,11 @@
     margin-right: 10px;
     position: relative;
 }
-.wrapper form .row input{
+
+.row form .row input {
     border-radius: 5px;
-    background: rgb(206, 116, 116);  
-    color: #fff; 
+    background: rgb(206, 116, 116);
+    color: #fff;
     height: 100%;
     width: 100%;
     padding-left: 5%;
@@ -186,11 +210,13 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
-.wrapper form .row input:focus{
+
+.row form .row input:focus {
     border-bottom-width: 2px;
     color: #fff;
 }
-.wrapper form .row .eye-icon{
+
+.row form .row .eye-icon {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -200,10 +226,11 @@
     cursor: pointer;
     padding: 5px;
 }
-.wrapper form .row .eye-icon:hover{
+
+.row form .row .eye-icon:hover {
     color: rgb(228, 144, 144);
-}
-/* .wrapper form .row input[type=submit]{
+ }
+    /* .wrapper form .row input[type=submit]{
     background: rgb(206, 116, 116);
     color: #fff;
     height: 100%;
@@ -213,20 +240,21 @@
     font-size: 15px;
 } */
 
-.wrapper form .bck_button{
+.row form .bck_button {
     /* background: rgb(206, 116, 116); */
     color: #fff;
     height: 100%;
-    width: 100%;  
+    width: 100%;
     font-weight: 500;
     margin-left: 10px;
     margin-top: 10px;
     font-size: 15px;
 }
-.wrapper form .bck_button input{
+
+.row form .bck_button input {
     border-radius: 5px;
-    background: rgb(206, 116, 116);  
-    color: #fff; 
+    background: rgb(206, 116, 116);
+    color: #fff;
     padding-left: 5px;
     padding-right: 5px;
     border: 1px solid rgb(206, 116, 116);
@@ -236,17 +264,20 @@
 
 
 
-.wrapper form .save_button input:hover{
+.row form .save_button input:hover {
     background: rgb(228, 144, 144);
 }
-.wrapper form .pass{
+
+.row form .pass {
     margin: 0 0 15px 0;
 }
-.wrapper form .pass a{
+
+.row form .pass a {
     text-decoration: none;
     color: rgb(206, 116, 116);
     font-weight: 500;
 }
-.wrapper form .pass a:hover{
+
+.row form .pass a:hover {
     text-decoration: underline;
 }
