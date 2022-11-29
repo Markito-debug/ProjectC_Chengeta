@@ -5,10 +5,11 @@ using Npgsql;
 namespace Mqttlistener
 {
     // This records are like Classes used for setting up a DB format
-    public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin /*,bool LoggedIn*/) { 
+    public record Rangers(Guid RangerID,string RangerName, string Username, string Password, int PhoneNumber, string Email, bool IsAdmin)
+    {
+        public bool LoggedIn { get; init; }
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }
-
     public record Notification(Guid ID, DateTime Time, int NodeID, float Latitude, float Longitude, string Sound_Type, int Probability, string Sound){
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }

@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Testapplication1.Database;
+namespace Testapplication1.Models;
 
-public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin/*,bool LoggedIn*/) { 
+public record Rangers(Guid RangerID,string RangerName, string Username, string Password, int PhoneNumber, string Email, bool IsAdmin)
+{
+    public bool LoggedIn { get; set; }
     public List<ConnectionTable> connectionTables { get; set; } = null!;
 }
 

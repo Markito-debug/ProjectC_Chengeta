@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-@model Testapplication1.Database.Rangers
+@model Rangers
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,9 +47,9 @@
                 <span asp-validation-for="RangerName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Login" class="control-label"></label>
-                <input asp-for="Login" class="form-control" />
-                <span asp-validation-for="Login" class="text-danger"></span>
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>

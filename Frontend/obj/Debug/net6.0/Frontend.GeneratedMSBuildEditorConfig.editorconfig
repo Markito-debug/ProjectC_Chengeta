@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Admin/ActiveRanger.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWN0aXZlUmFuZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Frontend/Views/Admin/AddRanger.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUmFuZ2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

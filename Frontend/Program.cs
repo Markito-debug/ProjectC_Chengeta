@@ -1,6 +1,7 @@
 using System.Data.Entity;
 using Microsoft.EntityFrameworkCore;
-using Testapplication1.Database;
+using Testapplication1.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

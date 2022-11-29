@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Testapplication1.Database;
 using Testapplication1.Models;
 using Testapplication1.Services;
 
@@ -42,7 +41,7 @@ public class AdminController : Controller
    {
        using (var context = new DatabaseConnect())
        {
-           var searched = context.Ranger.Where(s=>s.RangerName.Contains(Searched)/* || s.Email.Contains(Searched)*/).ToList();
+           var searched = context.Ranger.Where(s=>s.RangerName.Contains(Searched)).ToList();
            return searched != null ?
                View(searched) :
                Problem("No ranger is found.");
@@ -62,10 +61,22 @@ public class AdminController : Controller
         return RedirectToAction("Index", "Admin");
     }
     
+     public IActionResult ActiveRanger()
+     {
+         using (var context = new DatabaseConnect())
+         {
+             var active = context.Ranger.Where(s=>s.LoggedIn == true).ToList();
+             return active != null ?
+                 View(active) :
+                 Problem("No ranger is found.");
+         }
+     }   
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+
 }

@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Testapplication1.Database;
 using System.Security.Cryptography;
 using System.Text;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using Npgsql;
+using Testapplication1.Models;
 
 namespace Testapplication1.Services;
 
@@ -19,7 +19,7 @@ public class UserDAO
         {
             hashedPassword = ComputeSha256Hash(ranger.Password);
             var rangerFound = (from r in context.Ranger
-                where r.Login == ranger.Login
+                where r.Username == ranger.Username
                 where r.Password == hashedPassword
                 select r).FirstOrDefault();
             if (rangerFound == null)
@@ -30,16 +30,20 @@ public class UserDAO
             {
                 if (rangerFound.IsAdmin == true)
                 {
+                    rangerFound.LoggedIn = true;
+                    context.SaveChanges();
                     return "Admin";
                 }
                 else
                 {
+                    rangerFound.LoggedIn = true;
+                    context.SaveChanges();
                     return "Ranger";
                 }
             }
         }
     }
-
+/*
     public static void FindAndDeleteUser(Guid? id)
     {
         using (var context = new DatabaseConnect())
@@ -55,13 +59,14 @@ public class UserDAO
             }
         }
     }
-    
+ */   
     public static void AddUser(Rangers ranger)
     {
         using (var context = new DatabaseConnect())
         {
             hashedPassword = ComputeSha256Hash(ranger.Password);
-            var newRanger = new Rangers(Guid.NewGuid(), ranger.RangerName, ranger.Login, hashedPassword, ranger.PhoneNumber, ranger.Email, ranger.IsAdmin);
+            var newRanger = new Rangers(Guid.NewGuid(), ranger.RangerName, ranger.Username, hashedPassword, ranger.PhoneNumber, ranger.Email, ranger.IsAdmin);
+            newRanger.LoggedIn = false;
             context.Ranger.AddRange(newRanger);
             context.SaveChanges();
         }

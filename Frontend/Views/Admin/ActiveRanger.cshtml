@@ -2,37 +2,28 @@
 @model IEnumerable<Rangers>
 
 @{
-    ViewData["Title"] = "DeleteRanger";
+    ViewData["Title"] = "ActiveRanger";
 }
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SearchResult</title>
+    <title>Active Ranger</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styleIndex.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<div class="row">
-    <form asp-action="ShowResult">
-        <div class="form-group">
-            <label for="Searched" class="control-label"></label>
-            <input name="Searched" class="form-control"/>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Search" style="background: rgb(206, 116, 116); color: #fff" class="button"/>
-        </div>
-    </form>
-</div>
-<h2>List of rangers that match search criteria</h2>
-
+<h2>List of all active rangers</h2>
 <table class="table">
     <thead>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.RangerName)
         </th>
+         <th>
+             @Html.DisplayNameFor(model => model.IsAdmin)
+         </th>       
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
@@ -41,7 +32,7 @@
     <tbody>
     @if (Model.Count() == 0)
     {
-        <h4> No Rangers found for these criteria</h4>
+        <h4> No active Rangers </h4>
     }
     else
     {
@@ -52,10 +43,17 @@
                     @Html.DisplayFor(modelItem => item.RangerName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Email)
+                    @if (item.IsAdmin)
+                    {
+                        <p5>Yes</p5>
+                    }
+                    else
+                    {
+                        <p6>No</p6>
+                    }
                 </td>
                 <td>
-                   <!-- <//a asp-action="ProcessDeleteRanger" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.RangerID">Delete Ranger</a>-->
+                    @Html.DisplayFor(modelItem => item.Email)
                 </td>
             </tr>
         }        
@@ -66,3 +64,4 @@
     <input type="button" value="Back To Admin Screen" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Admin")'"/>
 </div>
 </body>
+
