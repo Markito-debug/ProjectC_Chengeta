@@ -25,7 +25,7 @@
         </div>
     </form>
     <div class="bck_button">
-        <input type="button" value="Back To Full List" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("DeleteRanger", "Admin")'"/>
+        <!--<input type="button" value="Back To Full List" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@//Url.Action("DeleteRanger", "Admin")'"/>-->
     </div>
 </div>
 <h2>List of rangers that match search criteria</h2>
@@ -58,7 +58,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    <a asp-action="ProcessDeleteRanger" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.RangerID">Delete Ranger</a>
+                   <!-- <//a asp-action="ProcessDeleteRanger" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.RangerID">Delete Ranger</a>-->
                 </td>
             </tr>
         }        
