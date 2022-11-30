@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/notifications-Info.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/Notif-INFO.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,81 +18,83 @@
     <title>Notifications</title>
 </head>
 <body>
-    <h1>Notification</h1>
-    <div class="bck_button">
-        <input type="button" value="Save Notification" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
-    </div>
-    <div>
-        <hr/>
-        <h1>Location</h1>
-        <div class="container-fluid">
-            <iframe class="well well-sm col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314924.2082984722!2d4.210647798207174!3d51.92765354017547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2sRotterdam!5e0!3m2!1sen!2snl!4v1666347054157!5m2!1sen!2snl" 
-             height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <div class="wrapper">
+        <h1>Notification</h1>
+        <div class="bck_button">
+            <input type="button" value="Save Notification" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
         </div>
-        <dl class="row">
-            <dt class="col-sm-2">
-                <h1>Date and Time</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Time)</h2>
-            </dd>
-            <dt class="col-sm-2">
-                <h1>NodeID</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.NodeID)</h2>
-            </dd>
-            <dt class="col-sm-2">
-                <h1>Soundtype</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Sound_Type)</h2>
-            </dd>
-            <dt class="col-sm-2">
-                <h1>Certainty</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Probability)</h2>
-            </dd>
-        </dl>
         <div>
-            <h1>Soundclip</h1>
-            <div class="label-text">
-                <audio controls>
-                    <source src="@ViewBag.Sound"/>
-                    Your browser does not support the audio element.
-                </audio>
+            <hr/>
+            <h1>Location</h1>
+            <div class="container-fluid">
+                <iframe class="well well-sm col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314924.2082984722!2d4.210647798207174!3d51.92765354017547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2sRotterdam!5e0!3m2!1sen!2snl!4v1666347054157!5m2!1sen!2snl" 
+                 height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-            <h1>Status</h1>
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text1"></label>
-            </div>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <h1>Date and Time</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.Time)</h2>
+                </dd>
+                <dt class="col-sm-2">
+                    <h1>NodeID</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.NodeID)</h2>
+                </dd>
+                <dt class="col-sm-2">
+                    <h1>Soundtype</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.Sound_Type)</h2>
+                </dd>
+                <dt class="col-sm-2">
+                    <h1>Certainty</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.Probability)</h2>
+                </dd>
+            </dl>
+            <div>
+                <h1>Soundclip</h1>
+                <div class="label-text">
+                    <audio controls>
+                        <source src="@ViewBag.Sound"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <h1>Status</h1>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label for="" class="text1"></label>
+                </div>
 
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text2"></label>
-            </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label for="" class="text2"></label>
+                </div>
 
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text3"></label>
-            </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label for="" class="text3"></label>
+                </div>
 
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text4"></label>
-            </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label for="" class="text4"></label>
+                </div>
 
-            <h1>Notes</h1>
-            <div class="notes-textbox">
-                <input type="text" placeholder="Type here">
+                <h1>Notes</h1>
+                <div class="notes-textbox">
+                    <input type="text" placeholder="Type here">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="bck_button">
-        <input type="button" value="Back To Notification Overview" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
+        <div class="bck_button">
+            <input type="button" value="Back To Notification Overview" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
+        </div>
     </div>
 </body>
