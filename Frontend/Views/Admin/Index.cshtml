@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    @*<link rel="stylesheet" href="css/main.css">*@
     <link rel="stylesheet" href="css/AdminHome.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -14,10 +14,13 @@
 <div class="wrapper">
     <i class='bx bx-user'></i>
     <form action="#">
+        
         <div class="bck_button">
             <input type="button" value="Logout" onclick="location.href='@Url.Action("ProcessLogout", "Login")'"/>
         </div>
         <h1>Hello Admin</h1>
+        <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo">
+        
         <div class="row button">
             <input type="button" value="Active Rangers" onclick="location.href='@Url.Action("ActiveRanger", "Admin")'"/>
         </div>
@@ -28,7 +31,7 @@
             <input type="button" value="Add Ranger" onclick="location.href='@Url.Action("AddRanger", "Admin")'"/>
         </div>
         <div class="row button">
-            <input type="button" value="Delete Ranger" onclick="location.href='@Url.Action("DeleteRanger", "Admin")'"/>
+            <input class="del" type="button" value="Delete Ranger" onclick="location.href='@Url.Action("DeleteRanger", "Admin")'"/>
         </div>
     </form>
 </div>
