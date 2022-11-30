@@ -17,7 +17,6 @@ namespace Testapplication1.Controllers
                                 View(recentNotifs) :
                                 Problem("Entity set 'DBModel.Notifs'  is null.");
             }
-
         }
 
         public async Task<IActionResult> Details(Guid? id)

@@ -46,6 +46,7 @@ namespace Mqttlistener
             DateTime date = epoch.AddSeconds(time).ToUniversalTime();
             Guid id = Guid.NewGuid();
             dbContext.Notifs.Add(new Notification(id, date, Int32.Parse(parsedMsg[1]), float.Parse(parsedMsg[2]), float.Parse(parsedMsg[3]), parsedMsg[4], Int32.Parse(parsedMsg[5]), parsedMsg[6]));
+            dbContext.SaveChanges();
             var notifStatus = dbContext.Notifs.Where(x => x.ID == id).First();
             notifStatus.Status = "Open";
             notifStatus.Notes = "";
