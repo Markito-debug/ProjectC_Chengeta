@@ -11,6 +11,7 @@ namespace Testapplication1.Services;
 public class UserDAO
 {
     private static string hashedPassword;
+    public static Rangers? CurrentRanger;
 
     public static string FindUser(Rangers ranger)
     {
@@ -28,6 +29,7 @@ public class UserDAO
             }
             else
             {
+                CurrentRanger = rangerFound;
                 if (rangerFound.IsAdmin == true)
                 {
                     rangerFound.LoggedIn = true;
@@ -43,7 +45,7 @@ public class UserDAO
             }
         }
     }
-/*
+
     public static void FindAndDeleteUser(Guid? id)
     {
         using (var context = new DatabaseConnect())
@@ -59,7 +61,7 @@ public class UserDAO
             }
         }
     }
- */   
+ 
     public static void AddUser(Rangers ranger)
     {
         using (var context = new DatabaseConnect())

@@ -29,12 +29,11 @@ namespace Testapplication1.Controllers
         }
         
         public IActionResult ProcessLogout()
-        {   
-            // How to change the LoggedIn back to false
+        {
             using (var context = new DatabaseConnect())
             {
-                //context.Rangers find current ranger and set LoggedIn to false
-                //ranger.LoggedIn = false;
+                var ranger = context.Ranger.Where(x=>x.RangerID == UserDAO.CurrentRanger.RangerID).First();
+                ranger.LoggedIn = false;
                 context.SaveChanges();
             }
             return RedirectToAction("Index", "Login");

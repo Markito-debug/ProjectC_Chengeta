@@ -26,15 +26,14 @@ public class AdminController : Controller
     
     public IActionResult DeleteRanger()
     {
-     /*   using (var context = new DatabaseConnect())
+        using (var context = new DatabaseConnect())
         {
             var allRangers = context.Ranger.OrderBy(x => x.RangerName).ToList();
             return allRangers != null ?
                 View(allRangers) :
                 Problem("Entity set 'DBModel.Ranger'  is null.");
-           
-        }*/
-     return View();
+        }
+        //return View();
     }
 
   public IActionResult ShowResult(string Searched)
@@ -47,13 +46,13 @@ public class AdminController : Controller
                Problem("No ranger is found.");
        }
    }  
-  /*
+  
     public IActionResult ProcessDeleteRanger(Guid? id)
     {
         UserDAO.FindAndDeleteUser(id);
         return RedirectToAction("Index", "Admin");
     }
-    */
+    
     
     public IActionResult ProcessAddRanger(Rangers model)
     {
