@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Testapplication1.Database;
+using Testapplication1.Models;
 using Testapplication1.Services;
 using Testapplication1.Views.Services;
 
@@ -26,6 +26,17 @@ namespace Testapplication1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+        }
+        
+        public IActionResult ProcessLogout()
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var ranger = context.Ranger.Where(x=>x.RangerID == UserDAO.CurrentRanger.RangerID).First();
+                ranger.LoggedIn = false;
+                context.SaveChanges();
+            }
+            return RedirectToAction("Index", "Login");
         }
     }
 }

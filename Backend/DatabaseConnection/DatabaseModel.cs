@@ -5,11 +5,14 @@ using Npgsql;
 namespace Mqttlistener
 {
     // This records are like Classes used for setting up a DB format
-    public record Rangers(Guid RangerID, string RangerName, string Login, string Password, int PhoneNumber, string Email, bool IsAdmin) { 
+    public record Rangers(Guid RangerID,string RangerName, string Username, string Password, int PhoneNumber, string Email, bool IsAdmin)
+    {
+        public bool LoggedIn { get; init; }
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }
-
     public record Notification(Guid ID, DateTime Time, int NodeID, float Latitude, float Longitude, string Sound_Type, int Probability, string Sound){
+        public string? Status { get; set; }
+        public string? Notes { get; set; }
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }
 
@@ -64,12 +67,20 @@ namespace Mqttlistener
             .HasForeignKey(_ => _.NotificationID);
         }
 
-
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionbuilder)
         {
             optionbuilder
-            .UseNpgsql(@"Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
+            .UseNpgsql(@$"Host=localhost:5432;Username=postgres;Password={GetEnvironmentVar()};Database=Chengeta");
+        }
+
+        private static string GetEnvironmentVar()
+        {
+            var value = Environment.GetEnvironmentVariable("PW_SQL");
+            if (value != null)
+
+                return value;
+            else
+                return "";
         }
     }
 }

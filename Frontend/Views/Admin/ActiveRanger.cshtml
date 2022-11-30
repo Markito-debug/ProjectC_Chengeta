@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Rangers>
+
+@{
+    ViewData["Title"] = "ActiveRanger";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Ranger</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<h2>List of all active rangers</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RangerName)
+        </th>
+         <th>
+             @Html.DisplayNameFor(model => model.IsAdmin)
+         </th>       
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model.Count() == 0)
+    {
+        <h4> No active Rangers </h4>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RangerName)
+                </td>
+                <td>
+                    @if (item.IsAdmin)
+                    {
+                        <p5>Yes</p5>
+                    }
+                    else
+                    {
+                        <p6>No</p6>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+            </tr>
+        }        
+    }
+    </tbody>
+</table>
+<div class="bck_button">
+    <input type="button" value="Back To Admin Screen" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Admin")'"/>
+</div>
+</body>
+

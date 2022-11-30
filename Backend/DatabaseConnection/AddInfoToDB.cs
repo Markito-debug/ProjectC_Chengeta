@@ -25,7 +25,6 @@ namespace Mqttlistener
                 double time = double.Parse(notif.Time);
                 DateTime date = epoch.AddSeconds(time).ToUniversalTime();
                 dbContext.Notifs.Add(new Notification(Guid.NewGuid(), date, notif.NodeID, notif.Latitude,notif.Longitude, notif.Sound_type, notif.Probability,notif.Sound ));
-                
             }
             dbContext.SaveChanges();
             Console.WriteLine("Done loading former data");
@@ -45,22 +44,14 @@ namespace Mqttlistener
             var epoch = new DateTime(1970, 1, 1, 0, 0, 0);
             double time = double.Parse(parsedMsg[0]);
             DateTime date = epoch.AddSeconds(time).ToUniversalTime();
-
-            dbContext.Notifs.Add(new Notification(Guid.NewGuid(), date, Int32.Parse(parsedMsg[1]), float.Parse(parsedMsg[2]), float.Parse(parsedMsg[3]), parsedMsg[4], Int32.Parse(parsedMsg[5]), parsedMsg[6]));
+            Guid id = Guid.NewGuid();
+            dbContext.Notifs.Add(new Notification(id, date, Int32.Parse(parsedMsg[1]), float.Parse(parsedMsg[2]), float.Parse(parsedMsg[3]), parsedMsg[4], Int32.Parse(parsedMsg[5]), parsedMsg[6]));
+            dbContext.SaveChanges();
+            var notifStatus = dbContext.Notifs.Where(x => x.ID == id).First();
+            notifStatus.Status = "Open";
+            notifStatus.Notes = "";
             dbContext.SaveChanges();
             Console.WriteLine("Done adding new notif");
-        }
-
-        public static void AddRangers()
-        {
-            var dbContext = new ListenerDb();
-            dbContext.Ranger.Add(new Rangers(Guid.NewGuid(), "Bob Ninja", "Ranger1", "R@nger1", 123456789,
-                "bobninja@mail.com", false));
-            dbContext.Ranger.Add(new Rangers(Guid.NewGuid(), "Rob Ninja", "Admin1", "@dmin1", 123456788,
-                "bobninja@mail.com", true));
-
-            dbContext.SaveChanges();
-            Console.WriteLine("Added rangers");
         }
     }
 
@@ -77,9 +68,9 @@ namespace Mqttlistener
             string[] soundtype = DataSplit(dataSplit[4], '"');
             string[] probability = DataSplit(dataSplit[5], ' ');
             string[] soundStart = DataSplit(dataSplit[6], '"');
-            string[] soundEnd = dataSplit[6][3].Split('"');
+            string[] soundEnd = dataSplit[6][2].Split('"');
 
-            string Sound = soundStart[1] +":"+ dataSplit[6][2]+":" +soundEnd[0];
+            string Sound = soundStart[1] +":"+soundEnd[0];
 
             string[] parsedData = {time[1], nodeid[1], latitude[1], longitude[1], soundtype[1], probability[1], Sound};
             return parsedData;

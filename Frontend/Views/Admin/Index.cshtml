@@ -15,9 +15,12 @@
     <i class='bx bx-user'></i>
     <form action="#">
         <div class="bck_button">
-            <input type="button" value="Logout" onclick="location.href='@Url.Action("Index", "Login")'"/>
+            <input type="button" value="Logout" onclick="location.href='@Url.Action("ProcessLogout", "Login")'"/>
         </div>
         <h1>Hello Admin</h1>
+        <div class="row button">
+            <input type="button" value="Active Rangers" onclick="location.href='@Url.Action("ActiveRanger", "Admin")'"/>
+        </div>
         <div class="row button">
             <input type="button" value="Notifications" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
         </div>
