@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@model Testapplication1.Database.Notification
+@model Notification
 
 @{
     ViewData["Title"] = "Details";
@@ -19,7 +19,7 @@
 <body>
     <h1>Notification</h1>
     <div class="bck_button">
-        <input type="button" value="Save Notification" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
+        <input type="button" value="Save Notification" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
     </div>
     <div>
         <hr/>
@@ -59,7 +59,7 @@
             <h1>Soundclip</h1>
             <div class="label-text">
                 <audio controls>
-                    <source src="@ViewBag.Sound" type="audio/wav"/>
+                    <source src="@ViewBag.Sound"/>
                     Your browser does not support the audio element.
                 </audio>
             </div>
@@ -92,6 +92,6 @@
     </div>
 
     <div class="bck_button">
-        <input type="button" value="Back To Notification Overview" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
+        <input type="button" value="Back To Notification Overview" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
     </div>
 </body>

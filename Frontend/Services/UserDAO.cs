@@ -1,26 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Testapplication1.Database;
 using System.Security.Cryptography;
 using System.Text;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using Npgsql;
+using Testapplication1.Models;
 
 namespace Testapplication1.Services;
 
 public class UserDAO
 {
     private static string hashedPassword;
+    public static Rangers? CurrentRanger;
 
     public static string FindUser(Rangers ranger)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
+
+        using (var context = new DatabaseConnect())
         {
             hashedPassword = ComputeSha256Hash(ranger.Password);
             var rangerFound = (from r in context.Ranger
-                where r.Login == ranger.Login
+                where r.Username == ranger.Username
                 where r.Password == hashedPassword
                 select r).FirstOrDefault();
             if (rangerFound == null)
@@ -29,29 +29,51 @@ public class UserDAO
             }
             else
             {
+                CurrentRanger = rangerFound;
                 if (rangerFound.IsAdmin == true)
                 {
+                    rangerFound.LoggedIn = true;
+                    context.SaveChanges();
                     return "Admin";
                 }
                 else
                 {
+                    rangerFound.LoggedIn = true;
+                    context.SaveChanges();
                     return "Ranger";
                 }
             }
         }
     }
+
+    public static void FindAndDeleteUser(Guid? id)
+    {
+        using (var context = new DatabaseConnect())
+        {
+            var removeRanger = (from r in context.Ranger 
+                                where r.RangerID == id
+                                select r).FirstOrDefault(); 
+
+            if(removeRanger != null)
+            {
+                context.Ranger.Remove(removeRanger);
+                context.SaveChanges();
+            }
+        }
+    }
+ 
     public static void AddUser(Rangers ranger)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<DatabaseConnect>();
-        optionsBuilder.UseNpgsql("Host=localhost:5432;Username=postgres;Password=yVONNE2403;Database=Chengeta");
-        using (var context = new DatabaseConnect(optionsBuilder.Options))
+        using (var context = new DatabaseConnect())
         {
             hashedPassword = ComputeSha256Hash(ranger.Password);
-            var newRanger = new Rangers(Guid.NewGuid(), ranger.RangerName, ranger.Login, hashedPassword, ranger.PhoneNumber, ranger.Email, ranger.IsAdmin);
+            var newRanger = new Rangers(Guid.NewGuid(), ranger.RangerName, ranger.Username, hashedPassword, ranger.PhoneNumber, ranger.Email, ranger.IsAdmin);
+            newRanger.LoggedIn = false;
             context.Ranger.AddRange(newRanger);
             context.SaveChanges();
         }
     }
+    
     static string ComputeSha256Hash(string rawData)
     {
         // Create a SHA256   
