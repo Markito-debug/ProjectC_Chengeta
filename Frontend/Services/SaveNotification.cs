@@ -31,10 +31,6 @@ public class SaveNotif : PageModel
             string notifId = null;
             foreach (var n in notifToSave)
             {
-                gfx.DrawString((n.NodeID).ToString(), font, XBrushes.Black, new XPoint(200, 100));
-                gfx.DrawString((n.Sound_Type), font, XBrushes.Black, new XPoint(200, 300));
-                gfx.DrawString((n.Probability).ToString(), font, XBrushes.Black, new XPoint(200, 500));
-                gfx.DrawString((n.Longitude).ToString(), font, XBrushes.Black, new XPoint(200, 500));
                 gfx.DrawString("Date and Time:", font, XBrushes.Black, new XPoint(200, 50));
                 gfx.DrawString((n.Time).ToString(), font, XBrushes.Black, new XPoint(200, 100));
 
