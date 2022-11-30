@@ -20,7 +20,7 @@ namespace Testapplication1.Controllers
             } 
             else if (UserDAO.FindUser(model) == "Ranger")
             {
-                return RedirectToAction("Index", "Notifications");
+                return RedirectToAction("Index", "Ranger");
             }
             else
             {
