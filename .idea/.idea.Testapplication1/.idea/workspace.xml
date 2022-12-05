@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="">
+    <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="made possible to change status of a notification">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/DatabaseConnection/AddInfoToDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DatabaseConnection/AddInfoToDB.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/DatabaseConnection/DatabaseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DatabaseConnection/DatabaseModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Controllers/NotificationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Controllers/NotificationsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Models/DatabaseConnect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Models/DatabaseConnect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Notifications/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" afterDir="false" />
@@ -29,6 +26,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/avien/source/repos/Markito-debug/ProjectC_renewed/Backend/DatabaseConnection/AddInfoToDB.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,19 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Frontend: IIS Express">
     <configuration name="Backend" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -145,7 +146,7 @@
       <workItem from="1669805133023" duration="725000" />
       <workItem from="1669806523684" duration="1518000" />
       <workItem from="1670237187280" duration="4405000" />
-      <workItem from="1670246019158" duration="676000" />
+      <workItem from="1670246019158" duration="1655000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes to frontend">
       <created>1668594224848</created>
@@ -224,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670241535810</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="made possible to change status of a notification">
+      <created>1670246737557</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670246737557</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +265,7 @@
     <MESSAGE value="Made changes to db, plus made start to ActiveRanger list" />
     <MESSAGE value="dumb notification issue fixed" />
     <MESSAGE value="made invalid user and no empty form check" />
-    <option name="LAST_COMMIT_MESSAGE" value="made invalid user and no empty form check" />
+    <MESSAGE value="made possible to change status of a notification" />
+    <option name="LAST_COMMIT_MESSAGE" value="made possible to change status of a notification" />
   </component>
 </project>

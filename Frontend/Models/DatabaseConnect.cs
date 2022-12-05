@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Connections;
+using Microsoft.EntityFrameworkCore;
 
 namespace Testapplication1.Models;
 
@@ -27,7 +28,7 @@ public class DatabaseConnect : DbContext
     
     public DbSet<Notification> Notifs { get; set; } = null!;
     public DbSet<Rangers> Ranger { get; set; } = null!;
-
+    public DbSet<ConnectionTable> Connections { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

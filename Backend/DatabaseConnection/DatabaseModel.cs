@@ -20,7 +20,7 @@ namespace Mqttlistener
     {
         public Rangers Ranger { get; set; } = null!;
         public Notification Notif { get; set; } = null!;
-
+        
     }
 
     /// <summary>
@@ -46,7 +46,7 @@ namespace Mqttlistener
 
         public DbSet<Notification> Notifs { get; set; } = null!;
         public DbSet<Rangers> Ranger { get; set; } = null!;
-
+        public DbSet<ConnectionTable> Connections { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

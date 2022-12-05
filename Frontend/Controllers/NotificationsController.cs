@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Testapplication1.Models;
+using Testapplication1.Services;
 using Testapplication1.Views.Services;
 
 namespace Testapplication1.Controllers
@@ -55,7 +56,7 @@ namespace Testapplication1.Controllers
                 {
                     statusChange.NStatus = "Open";
                 }
-
+                
                 context.SaveChanges();
             }
 
@@ -72,6 +73,8 @@ namespace Testapplication1.Controllers
                     statusChange.NStatus = "In Progress";
                 }
 
+                var rangerNotifCon = new ConnectionTable(Guid.NewGuid(), UserDAO.CurrentRanger.RangerID, id);
+                context.Connections.AddRange(rangerNotifCon);
                 context.SaveChanges();
             }
 
