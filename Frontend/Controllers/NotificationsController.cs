@@ -13,9 +13,7 @@ namespace Testapplication1.Controllers
             using (var context = new DatabaseConnect())
             {
                 var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
-                return recentNotifs != null ?
-                                View(recentNotifs) :
-                                Problem("Entity set 'DBModel.Notifs'  is null.");
+                return recentNotifs != null ? View(recentNotifs) : Problem("Entity set 'DBModel.Notifs'  is null.");
             }
         }
 
@@ -47,5 +45,53 @@ namespace Testapplication1.Controllers
             SaveNotif.SavedNotification(id);
             return RedirectToAction("Index", "Notifications");
         }
+
+        public IActionResult StatusToOpen(Guid id)
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
+                if (!(statusChange.NStatus == "Open"))
+                {
+                    statusChange.NStatus = "Open";
+                }
+
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Details", "Notifications", new { ID = id });
+        }
+
+        public IActionResult StatusToProgress(Guid id)
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
+                if (!(statusChange.NStatus == "In Progress"))
+                {
+                    statusChange.NStatus = "In Progress";
+                }
+
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Details", "Notifications", new { ID = id });
+        }
+
+        public IActionResult StatusToClosed(Guid id)
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
+                if (!(statusChange.NStatus == "Closed"))
+                {
+                    statusChange.NStatus = "Closed";
+                }
+
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Details", "Notifications", new { ID = id });
+        }
     }
-}
+}    

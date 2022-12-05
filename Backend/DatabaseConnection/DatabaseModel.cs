@@ -11,7 +11,7 @@ namespace Mqttlistener
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }
     public record Notification(Guid ID, DateTime Time, int NodeID, float Latitude, float Longitude, string Sound_Type, int Probability, string Sound){
-        public string? Status { get; set; }
+        public string? NStatus { get; set; }
         public string? Notes { get; set; }
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }

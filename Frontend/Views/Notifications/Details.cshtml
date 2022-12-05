@@ -60,7 +60,7 @@
             </dd>
             <dt class="col-sm-2"><h1>Status</h1></dt>
             <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Status)</h2>
+                <h2>@Html.DisplayFor(model => model.NStatus)</h2>
             </dd>
         </dl>
         <div>
@@ -73,13 +73,13 @@
             </div>
             <div><h3>Change Notification Status</h3></div>
             <div class="bck_button">
-                <input type="button" value="Change Status to Open" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
+                <input type="button" value="Change Status to Open" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("StatusToOpen", "Notifications", new { id = Model.ID })'"/>
             </div>
             <div class="bck_button">
-                <input type="button" value="Change Status to In Progress" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications")'"/>
+                <input type="button" value="Change Status to In Progress" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("StatusToProgress", "Notifications", new { id = Model.ID })'"/>
             </div>
             <div class="bck_button">
-                <input type="button" value="Change Status to Closed" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications")'"/>
+                <input type="button" value="Change Status to Closed" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'"/>
             </div>            
             <h1>Notes</h1>
             <div class="notes-textbox">
