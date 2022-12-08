@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj": {}
+    "C:\\Users\\Yvonn\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj": {
+    "C:\\Users\\Yvonn\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\Yvonn\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj",
         "projectName": "Frontend",
-        "projectPath": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\obj\\",
+        "projectPath": "C:\\Users\\Yvonn\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\Frontend.csproj",
+        "packagesPath": "C:\\Users\\Yvonn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yvonn\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yvonn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,8 +87,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -100,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
