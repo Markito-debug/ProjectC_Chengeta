@@ -22,8 +22,14 @@
     </style>
 </head>
 <body>
+<div class="alert-danger">    
+    @if (TempData["LoginFlag"] != null)
+    {
+        @TempData["LoginFlag"];
+    }
+</div>
 <div class="row">
-    
+
     <div class="col-md-4">
         <form asp-action="ProcessLogin">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
