@@ -8,7 +8,7 @@ public record Rangers(Guid RangerID,string RangerName, string Username, string P
     public List<ConnectionTable> connectionTables { get; set; } = null!;
 }
 
-public record Notification(Guid ID, DateTime Time, int NodeID, float Latitude, float Longitude, string Sound_Type, int Probability, string Sound){
+public record Notification(Guid ID, DateTime Time, int NodeID, string Latitude, string Longitude, string Sound_Type, int Probability, string Sound){
     
     public string? Status { get; set; }
     public string? Notes { get; set; }

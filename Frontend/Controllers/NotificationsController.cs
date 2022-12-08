@@ -15,7 +15,7 @@ namespace Testapplication1.Controllers
                 var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
                 return recentNotifs != null ?
                                 View(recentNotifs) :
-                                Problem("Entity set 'DBModel.Notifs'  is null.");
+                                Problem("Entity set 'DBModel.Notifs' is null.");
             }
         }
 
@@ -46,6 +46,19 @@ namespace Testapplication1.Controllers
         {
             SaveNotif.SavedNotification(id);
             return RedirectToAction("Index", "Notifications");
+        }
+
+
+        public JsonResult GetBranch()
+        {
+            using (var context = new DatabaseConnect())
+            {
+                List<Notification> branches = new List<Notification>();
+                var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
+                return Json(recentNotifs);
+            }
+            
+            
         }
     }
 }

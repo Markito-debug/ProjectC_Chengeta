@@ -10,7 +10,7 @@ namespace Mqttlistener
         public bool LoggedIn { get; init; }
         public List<ConnectionTable> connectionTables { get; set; } = null!;
     }
-    public record Notification(Guid ID, DateTime Time, int NodeID, float Latitude, float Longitude, string Sound_Type, int Probability, string Sound){
+    public record Notification(Guid ID, DateTime Time, int NodeID, string Latitude, string Longitude, string Sound_Type, int Probability, string Sound){
         public string? Status { get; set; }
         public string? Notes { get; set; }
         public List<ConnectionTable> connectionTables { get; set; } = null!;
@@ -32,8 +32,8 @@ namespace Mqttlistener
         public int ID { get; set; }
         public string Time { get; set; } = null!;
         public int NodeID { get; set; } //int
-        public float Latitude { get; set; } //float
-        public float Longitude { get; set; } //float
+        public string Latitude { get; set; } = null!;//float
+        public string Longitude { get; set; } = null!;//float
         public string Sound_type { get; set; } = null!;
         public int Probability { get; set; } //int
         public string Sound { get; set; } = null!;

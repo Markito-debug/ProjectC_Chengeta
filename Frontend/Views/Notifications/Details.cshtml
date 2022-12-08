@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Details";
 }
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -97,4 +97,163 @@
             <input type="button" value="Back To Notification Overview" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
         </div>
     </div>
+</body>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/NotificationDetail.css" asp-append-version="true">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+          crossorigin="" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        .map {
+            width: 85%;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+    <title>Notifications</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <i class='bx bx-alarm-exclamation'></i>
+        <form action="#">
+            <div class="bck_button">
+                <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Notifications")'" />
+            </div>
+            <div class="save-notification">
+                <input type="button" value="Save PDF" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'" />
+            </div>
+            <h1 class="label-text">Location</h1>
+
+            <div id="map" class="map"></div>
+
+            <h1 class="label-text">Time and date</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.Time)
+                </label>
+            </div>
+            <h1 class="label-text">Node</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.NodeID)
+                </label>
+            </div>
+            
+            <h1 class="label-text">Soundtype</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.Sound_Type)
+                </label>
+            </div>
+            <h1 class="label-text">Certainty</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.Probability)%
+                </label>
+            </div>
+            <h1 class="label-text">Soundclip</h1>
+            <div class="data">
+                <label>
+                    <audio controls>
+                        <source src="@ViewBag.Sound" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </label>
+            </div>
+            <!-- <h1 class="label-text">Status</h1>
+            <div class="checkbox">
+                <input type="checkbox">
+                <label for="" class="text1"></label>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox">
+                <label for="" class="text2"></label>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox">
+                <label for="" class="text3"></label>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox">
+                <label for="" class="text4"></label>
+            </div> -->
+
+            <h1 class="label-text">Notes</h1>
+            <div class="notes-textbox">
+                <input type="text" placeholder="Type here">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var latitude = '@Model.Latitude';
+        var longitude = '@Model.Longitude';
+        var map = L.map("map", {
+            minZoom: 0,
+            maxZoom: 16,
+
+        }).setView([0, 0], 3);
+        L.tileLayer("https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=vbWSgaVomjqBXBlqx78m", {
+            // attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        }).addTo(map)
+
+        var southWest = L.latLng(-89.98155760646617, -180),
+            northEast = L.latLng(89.99346179538875, 180);
+        var bounds = L.latLngBounds(southWest, northEast);
+
+        map.setMaxBounds(bounds);
+        map.on('drag', function () {
+            map.panInsideBounds(bounds, { animate: false });
+        });
+
+        map.attributionControl.setPrefix("Chengeta Wildlife")
+        map.flyTo([parseFloat(latitude), parseFloat(longitude)], 8)
+        map.locate({ setView: true, maxZoom: 16 });
+
+        // map.flyTo(locate)
+        var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map).bindPopup("This is a notification");
+        //var marker2 = L.marker([51.8912580784196, 4.504095176782142]).addTo(map);
+        var rangerIcon = L.icon({
+            iconUrl: "./wwwroot/images/Ranger.png",
+            iconAnchor: [15, 25],
+            iconSize: [27.5, 37.5]
+        })
+
+
+        function onLocationFound(e) {
+            var radius = e.accuracy;
+
+            L.marker(e.latlng, { icon: rangerIcon }).addTo(map)
+                .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+        }
+
+        map.on('locationfound', onLocationFound);
+
+        function onLocationError(e) {
+            alert(e.message);
+        }
+
+        map.on('locationerror', onLocationError);
+
+    </script>
+
+
 </body>
+</html>

@@ -77,53 +77,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/Notification.css">
+    <link rel="stylesheet" href="~/css/Notification.css" asp-append-version="true">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+          crossorigin="" />
+    <style>
+        .map {
+            width: 85%;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
     <title>Notifications</title>
-
 </head>
 <body>
-    <table class="content-table">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Sound</th>
-                <th>Sound Type</th>
-                <th>Certainty</th>
-                <th>
-                    <i class='bx bx-refresh' onClick="window.location.reload()"> </i>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <div class="wrapper">
+    <i class='bx bx-alarm-exclamation'></i>
+    <div class="bck_button">
+        <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Notifications")'" />
+    </div>
+    <div id="map" class="map"></div>
+    <div style="overflow-x:auto;">
+
+        <table class="content-table">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Time)
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="@(item.Sound)" type="audio/wav" />
-                            Your browser does not support the audio element.
-                        </audio>
-                        @*<audio controls>
-                            <source src="https://static.175.249.108.65.clients.your-server.de/15564-2-0-0.wav">
-                            Your browser does not support the audio element.
-                        </audio>*@
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Sound_Type)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Probability)%
-                    </td>
-                    <td>
-                        <a asp-action="Details" class="Detail_button"  asp-route-id="@item.ID">Details</a>
-                    </td>
+                    <th>
+                        <i class='bx bx-refresh' onClick="window.location.reload()"> </i>
+                    </th>
+                    <th>Time</th>
+                    <th>Sound</th>
+                    <th>Sound Type</th>
+                    <th>Certainty</th>
+                    
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a asp-action="Details" class="Detail_button"  asp-route-id="@item.ID">Details</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Time)
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="@(item.Sound)" type="audio/wav" />
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sound_Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Probability)%
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <script>
+    
+        var map = L.map("map", {
+            minZoom: 0,
+            maxZoom: 16,
+
+        }).setView([0, 0], 3);
+        L.tileLayer("https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=vbWSgaVomjqBXBlqx78m", {
+            // attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        }).addTo(map)
+
+        var southWest = L.latLng(-89.98155760646617, -180),
+            northEast = L.latLng(89.99346179538875, 180);
+        var bounds = L.latLngBounds(southWest, northEast);
+
+        map.setMaxBounds(bounds);
+        map.on('drag', function () {
+            map.panInsideBounds(bounds, { animate: false });
+        });
+
+        map.attributionControl.setPrefix("Chengeta Wildlife")
+        
+
+        $.ajax({
+            url: '/Notifications/GetBranch',
+            success: function (data) {
+                console.log(data)
+                $(data).each(function (index, item) {
+                    var lat = item.latitude;
+                    var long = item.longitude;
+                    L.marker([lat, long]).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability);
+                });
+            },
+        });
+
+    </script>
 </body>
 </html>

@@ -22,7 +22,8 @@ namespace Mqttlistener
         private static void MqttClient_MqttMsPublishedReceived(object sender, MqttMsgPublishEventArgs e)
         {
             var message = Encoding.UTF8.GetString(e.Message);
-            //Mqttlistener.AddListenerInfoToDB.AddJsonToDB(); //Run when database is empty, this is cached sample data saved in ListenerData.json
+            //Mqttlistener.AddListenerInfoToDB.AddJsonToDB(); //Run when database is empty, this is cached sample data saved in ListenerData.json\
+            Console.WriteLine(message);
             Mqttlistener.AddListenerInfoToDB.AddToDB(message);
         }
 
