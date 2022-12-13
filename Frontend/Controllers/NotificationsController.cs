@@ -58,16 +58,16 @@ namespace Testapplication1.Controllers
                 var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
                 return Json(recentNotifs);
             }
-            
+        }  
             
         public IActionResult StatusToOpen(Guid id)
         {
             using (var context = new DatabaseConnect())
             {
                 var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
-                if (!(statusChange.NStatus == "Open"))
+                if (!(statusChange.Status == "Open"))
                 {
-                    statusChange.NStatus = "Open";
+                    statusChange.Status = "Open";
                 }
                 
                 context.SaveChanges();
@@ -81,9 +81,9 @@ namespace Testapplication1.Controllers
             using (var context = new DatabaseConnect())
             {
                 var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
-                if (!(statusChange.NStatus == "In Progress"))
+                if (!(statusChange.Status == "In Progress"))
                 {
-                    statusChange.NStatus = "In Progress";
+                    statusChange.Status = "In Progress";
                 }
 
                 var rangerNotifCon = new ConnectionTable(Guid.NewGuid(), UserDAO.CurrentRanger.RangerID, id);
@@ -99,9 +99,9 @@ namespace Testapplication1.Controllers
             using (var context = new DatabaseConnect())
             {
                 var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
-                if (!(statusChange.NStatus == "Closed"))
+                if (!(statusChange.Status == "Closed"))
                 {
-                    statusChange.NStatus = "Closed";
+                    statusChange.Status = "Closed";
                 }
 
                 context.SaveChanges();
@@ -109,5 +109,15 @@ namespace Testapplication1.Controllers
 
             return RedirectToAction("Details", "Notifications", new { ID = id });
         }
+
+        public IActionResult ReturnHome()
+        {
+            if (UserDAO.CurrentRanger.IsAdmin)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            return RedirectToAction("Index", "Ranger");
+        }
     }
-}    
+}
+    

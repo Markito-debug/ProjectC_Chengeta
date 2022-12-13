@@ -4,7 +4,7 @@
 }
 @model Rangers
 
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,8 +57,8 @@
                 <input type="checkbox" data-val="true" data-val-required="The IsAdmin field is required." id="IsAdmin" name="IsAdmin" value="true">
                 <input name="IsAdmin" type="hidden" value="false">
             </div>
-            <div class="save_button">
-                <input type="button" value="Add" onclick="location.href='/'"/>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" style="background: rgb(206, 116, 116); color: #fff" />
             </div>
         </form>
     </div>
@@ -67,7 +67,76 @@
 <div>
     <a asp-action="Index">Back to Home</a>
 </div>
+*@
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="~/css/AddRanger.css" asp-append-version="true">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <i class='bx bx-user-plus'></i>
+
+        @*<input asp-for="Username" placeholder="Username" required />
+        <span asp-validation-for="Username" class="text-danger"></span>*@
+        <form asp-action="ProcessAddRanger">
+            
+            <h1>Add Ranger</h1>
+            <div style="margin-bottom: 15px;">
+                <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
+            </div>
+            <div class="row">
+                @*<input type="text" placeholder="Name" required>*@
+                <input asp-for="RangerName" placeholder="Ranger Name" required />
+                <span asp-validation-for="RangerName" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <input asp-for="Username" placeholder="Username" required />
+                <span asp-validation-for="Username"></span>
+            </div>
+            <div class="row">
+                <input asp-for="Password" placeholder="Password" type="password" required />
+                <span asp-validation-for="Password" ></span>
+                <i class='bx bx-hide eye-icon'></i>
+            </div>
+            <!-- <div class="row">
+                <input type="password" placeholder="Confirm Password" class="password" required>
+                <i class='bx bx-hide eye-icon'></i>
+            </div> -->
+            <div class="row">
+                <input asp-for="PhoneNumber" placeholder="PhoneNumber (Optional)" />
+                @*<span asp-validation-for="PhoneNumber"></span>*@
+            </div>
+            <div class="row">
+                <input asp-for="Email" placeholder="Email" required type="email" />
+                <span asp-validation-for="Email"></span>
+
+            </div>
+
+            <div style="margin: 2%; margin-bottom: 5%;">
+                @*<input type="checkbox" id="admin-access">
+                <label for="admin-access" style="font-size: 15px; margin-left: 5px;"> Does this person need Admin rights?</label><br>*@
+
+                <input type="checkbox" data-val="true" data-val-required="The IsAdmin field is required." id="IsAdmin" name="IsAdmin" value="true">
+                <input name="IsAdmin" type="hidden" value="false">
+                <label for="IsAdmin" style="font-size: 15px; margin-left: 5px; font-weight: bold; color: rgb(206, 116, 116);"> Does this person need Admin rights?</label><br>
+            </div>
+
+            <div class="row button">
+                <input type="submit" value="Add">
+            </div>
+        </form>
+    </div>
+
+    <script src="~/js/app.js"></script>
+</body>
+</html>

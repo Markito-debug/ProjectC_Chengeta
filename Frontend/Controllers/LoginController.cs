@@ -38,7 +38,7 @@ namespace Testapplication1.Controllers
         {
             using (var context = new DatabaseConnect())
             {
-                var ranger = context.Ranger.Where(x=>x.RangerID == UserDAO.CurrentRanger.RangerID).First();
+                var ranger = context.Ranger.Where(x=>x.RangerID == UserDAO.CurrentRanger.RangerID).FirstOrDefault();
                 ranger.LoggedIn = false;
                 context.SaveChanges();
             }

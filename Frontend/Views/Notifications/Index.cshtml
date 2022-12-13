@@ -89,6 +89,7 @@
             width: 85%;
             height: 300px;
             margin: auto;
+            margin-bottom: 20px;
         }
     </style>
     <title>Notifications</title>
@@ -174,7 +175,7 @@
                 $(data).each(function (index, item) {
                     var lat = item.latitude;
                     var long = item.longitude;
-                    L.marker([lat, long]).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability);
+                    L.marker([lat, long]).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
                 });
             },
         });

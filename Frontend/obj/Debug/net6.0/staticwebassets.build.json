@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1a6XMMxJ9QnHntoNx+5/E9XwEKqjZBGuV/ZwtmHhEOk=",
+  "Hash": "tWYavwnQPLV4g7dsaLr/fWAymQlpjCuUrlQt0xqcAf0=",
   "Source": "Frontend",
   "BasePath": "_content/Frontend",
   "Mode": "Default",
@@ -68,12 +68,12 @@
       "OriginalItemSpec": "wwwroot\\css\\AddNewRanger.css"
     },
     {
-      "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\ADDranger.css",
+      "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\AddRanger.css",
       "SourceId": "Frontend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\",
       "BasePath": "_content/Frontend",
-      "RelativePath": "css/ADDranger.css",
+      "RelativePath": "css/AddRanger.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\ADDranger.css"
+      "OriginalItemSpec": "wwwroot\\css\\AddRanger.css"
     },
     {
       "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\AdminHome.css",
@@ -102,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\css\\AdminHome.css"
     },
     {
-      "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\DELETEranger.css",
+      "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\DeleteRanger.css",
       "SourceId": "Frontend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\",
       "BasePath": "_content/Frontend",
-      "RelativePath": "css/DELETEranger.css",
+      "RelativePath": "css/DeleteRanger.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,7 +116,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\DELETEranger.css"
+      "OriginalItemSpec": "wwwroot\\css\\DeleteRanger.css"
     },
     {
       "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\Login.css",

@@ -6,6 +6,7 @@
 html, body {
     display: grid;
     margin: auto;
+    place-items: center;
     background: #ebdbdb;
 }
 

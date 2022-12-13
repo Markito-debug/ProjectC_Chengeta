@@ -131,9 +131,10 @@
         <form action="#">
             <div class="bck_button">
                 <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Notifications")'" />
+                <input type="button" value="Save PDF" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'" />
             </div>
             <div class="save-notification">
-                <input type="button" value="Save PDF" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'" />
+                
             </div>
             <h1 class="label-text">Location</h1>
 
@@ -173,20 +174,22 @@
                     </audio>
                 </label>
             </div>
-            <!-- <h1 class="label-text">Status</h1>
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text1"></label>
-            <div><h3>Change Notification Status</h3></div>
-            <div class="bck_button">
-                <input type="button" value="Change Status to Open" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("StatusToOpen", "Notifications", new { id = Model.ID })'"/>
+            <h1 class="label-text">Change Status</h1>
+            <div class="data">
+                <label>
+                    Current status: @Html.DisplayFor(model => model.Status)
+                </label>
             </div>
-            <div class="bck_button">
-                <input type="button" value="Change Status to In Progress" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("StatusToProgress", "Notifications", new { id = Model.ID })'"/>
+            <div class="row button">
+                <input type="button"  style="background: Green" value="Change Status to Open" onclick="location.href='@Url.Action("StatusToOpen", "Notifications", new { id = Model.ID })'"/>
             </div>
-            <div class="bck_button">
-                <input type="button" value="Change Status to Closed" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'"/>
-            </div>            
+            <div class="row button">
+                <input type="button" style="background: Orange" value="Change Status to In Progress" onclick="location.href='@Url.Action("StatusToProgress", "Notifications", new { id = Model.ID })'" />
+            </div>
+            <div class="row button">
+                <input type="button" style="background: Red" value="Change Status to Closed" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'" />
+            </div>
+            
             <h1>Notes</h1>
             <div class="notes-textbox">
                 <input type="text" placeholder="Type here">
@@ -206,6 +209,7 @@
             // attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         }).addTo(map)
 
+
         var southWest = L.latLng(-89.98155760646617, -180),
             northEast = L.latLng(89.99346179538875, 180);
         var bounds = L.latLngBounds(southWest, northEast);
@@ -219,9 +223,7 @@
         map.flyTo([parseFloat(latitude), parseFloat(longitude)], 8)
         map.locate({ setView: true, maxZoom: 16 });
 
-        // map.flyTo(locate)
-        var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map).bindPopup("This is a notification");
-        //var marker2 = L.marker([51.8912580784196, 4.504095176782142]).addTo(map);
+        var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map).bindPopup("Latitude: " + '@Model.Latitude' + "<br>" + "Longitude: " + '@Model.Longitude' + "<br>" + "Sound type: " + '@Model.Sound_Type' + "<br>" + "Probability: " + '@Model.Probability' + "%");
         var rangerIcon = L.icon({
             iconUrl: "./wwwroot/images/Ranger.png",
             iconAnchor: [15, 25],
@@ -232,8 +234,8 @@
         function onLocationFound(e) {
             var radius = e.accuracy;
 
-            L.marker(e.latlng, { icon: rangerIcon }).addTo(map)
-                .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+            L.marker(e.latlng, { icon: rangerIcon }).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
 
             L.circle(e.latlng, radius).addTo(map);
         }
@@ -246,8 +248,33 @@
 
         map.on('locationerror', onLocationError);
 
+        navigator.geolocation.watchPosition(render);
+
+        
+
+        //function getDistance(origin, destination) {
+        //    // return distance in meters
+        //    var lon1 = toRadian(origin[1]),
+        //        lat1 = toRadian(origin[0]),
+        //        lon2 = toRadian(destination[1]),
+        //        lat2 = toRadian(destination[0]);
+
+        //    var deltaLat = lat2 - lat1;
+        //    var deltaLon = lon2 - lon1;
+
+        //    var a = Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon / 2), 2);
+        //    var c = 2 * Math.asin(Math.sqrt(a));
+        //    var EARTH_RADIUS = 6371;
+        //    return c * EARTH_RADIUS * 1000;
+        //}
+        //function toRadian(degree) {
+        //    return degree * Math.PI / 180;
+        //}
+        //var distance = getDistance([lat1, lng1], [lat2, lng2])
+
     </script>
 
+    
 
 </body>
 </html>

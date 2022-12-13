@@ -1,15 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-    margin:  0;
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-html,body{
-    text-align: center;
+html, body {
     display: grid;
     height: 100%;
+    margin: auto;
     place-items: center;
     background: #ebdbdb;
 }
+
+.wrapper {
+    width: 380px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+
+
+    .wrapper .bx-user-minus {
+        background: rgb(206, 116, 116);
+        line-height: 80px;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        font-size: 50px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .wrapper form {
+        padding: 30px 20px 25px 20px;
+    }
+
+        .wrapper form .bck_button {
+            border-radius: 5px;
+            background: rgb(206, 116, 116);
+            color: #fff;
+            margin-left: 10px;
+            margin-top: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid rgb(206, 116, 116);
+            font-size: 12px;
+        }
+
+            .wrapper form .bck_button:hover {
+                background: rgb(228, 144, 144);
+                cursor: pointer;
+            }
+
+        .wrapper form h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .wrapper form .row {
+            height: 45px;
+            /* background: #ff000f; */
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+.search-bar input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 5px 0 0 5px;
+}
+
+    .search-bar input[type=text]:focus {
+        border: 2px solid rgb(206, 116, 116);
+        outline: none;
+    }
+
+.search-bar button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: rgb(206, 116, 116);
+    ;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+    .search-bar button:hover {
+        background: rgb(228, 144, 144);
+        ;
+    }
+
+.search-bar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.content-table {
+    border-collapse: collapse;
+    font-size: 0.8em;
+    min-width: 300px;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+    .content-table thead tr {
+        background-color: rgb(206, 116, 116);
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 10px 5px;
+    }
+
+
+    .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+        .content-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .content-table tbody tr:last-of-type {
+            border-bottom: 2px solid rgb(206, 116, 116);
+        }
+
+        .content-table tbody tr td .Delete_button {
+            background: rgb(206, 116, 116);
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+            border-radius: 5px;
+        }

@@ -11,7 +11,7 @@ public record Rangers(Guid RangerID,string RangerName, string Username, string P
 
 public record Notification(Guid ID, DateTime Time, int NodeID, string Latitude, string Longitude, string Sound_Type, int Probability, string Sound){
     
-    public string? NStatus { get; set; }
+    public string? Status { get; set; }
     public string? Notes { get; set; }
     public List<ConnectionTable> connectionTables { get; set; } = null!;
 }
