@@ -1,8 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    margin: auto;
+    background: #ebdbdb;
+}
+
 .wrapper{
     width: 380px;
     background: #fff;
     border-radius: 5px;
 }
+
+.wrapper .logo{
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    width: 50%;
+    
+}
+
+
+
 .wrapper .bx-user{
     background: rgb(206, 116, 116);
     line-height: 80px;
@@ -12,27 +43,22 @@
     text-align: center;
     color: #fff;
 }
-.wrapper h1{
-    text-align: center;
-    margin: 3%;
-}
-.wrapper form button{
+
+.wrapper form{
     padding: 30px 20px 25px 20px;
+ 
 }
+
 .wrapper form .row{
-    color: #fff;
-    text-decoration-color: #fff;
     height: 45px;
     /* background: #ff000f; */
     margin-bottom: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
     position: relative;
 }
+
 .wrapper form .row input{
     border-radius: 5px;
-    background: rgb(206, 116, 116);  
-    color: #fff; 
+    background: blanchedalmond;
     height: 100%;
     width: 100%;
     padding-left: 5%;
@@ -41,10 +67,11 @@
     border: 1px solid rgb(206, 116, 116);
     font-size: 15px;
 }
+
 .wrapper form .row input:focus{
     border-bottom-width: 2px;
-    color: #fff;
 }
+
 .wrapper form .row .eye-icon{
     position: absolute;
     top: 50%;
@@ -55,10 +82,12 @@
     cursor: pointer;
     padding: 5px;
 }
+
 .wrapper form .row .eye-icon:hover{
     color: rgb(228, 144, 144);
 }
-/* .wrapper form .row input[type=submit]{
+
+.wrapper form .row input[type=submit]{
     background: rgb(206, 116, 116);
     color: #fff;
     height: 100%;
@@ -66,57 +95,28 @@
     font-weight: 500;
     padding-left: 0px;
     font-size: 15px;
+
+}
+/* .wrapper form .button input{
+    padding-left: 0px;
 } */
-
-.wrapper form .bck_button{
-    background: rgb(206, 116, 116);
-    color: #fff;
-    height: 100%;
-    width: 100%;  
-    font-weight: 500;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 15px;
-}
-.wrapper form .bck_button input{
-    border-radius: 5px;
-    background: rgb(206, 116, 116);  
-    color: #fff; 
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid rgb(206, 116, 116);
-    font-size: 12px;
-}
-
-
 
 .wrapper form .button input:hover{
     background: rgb(228, 144, 144);
 }
+
 .wrapper form .pass{
     margin: 0 0 15px 0;
+    
 }
+
 .wrapper form .pass a{
     text-decoration: none;
     color: rgb(206, 116, 116);
     font-weight: 500;
 }
+
 .wrapper form .pass a:hover{
     text-decoration: underline;
 }
 
-
-.wrapper form .bck_button input:hover{
-    background: rgb(228, 144, 144);
-}
-.wrapper form .pass{
-    margin: 0 0 15px 0;
-}
-.wrapper form .pass a{
-    text-decoration: none;
-    color: rgb(206, 116, 116);
-    font-weight: 500;
-}
-.wrapper form .pass a:hover{
-    text-decoration: underline;
-}

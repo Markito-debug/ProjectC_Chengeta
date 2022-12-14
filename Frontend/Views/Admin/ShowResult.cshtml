@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "DeleteRanger";
 }
-<head>
+@*<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
     <tbody>
     @if (Model.Count() == 0)
     {
-        <h4> No Rangers found for these criteria</h4>
+        <h4> No Rangers found !</h4>
     }
     else
     {
@@ -55,7 +55,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                   <!-- <//a asp-action="ProcessDeleteRanger" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.RangerID">Delete Ranger</a>-->
+                  <a asp-action="ProcessDeleteRanger" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.RangerID">Delete Ranger</a>
                 </td>
             </tr>
         }        
@@ -65,4 +65,76 @@
 <div class="bck_button">
     <input type="button" value="Back To Admin Screen" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Admin")'"/>
 </div>
+</body>*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="~/css/DeleteRanger.css" asp-append-version="true">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<body>
+    
+    
+    <div class="wrapper">
+        <i class='bx bx-user-minus'></i>
+        
+        <form asp-action="ShowResult">
+            <h1>Results</h1>
+            <div style="margin-bottom: 15px;">
+                <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
+            </div>
+            <div class="search-bar" action="/action_page.php" style="margin:auto;max-width:300px;">
+                <input type="text" placeholder="Search.." name="Searched">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <div style="overflow-x:auto;">
+
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() > 0)
+                     
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RangerName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        <a asp-action="ProcessDeleteRanger" asp-route-id="@item.RangerID" class="Delete_button">Delete Ranger</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                    
+                </table>
+                @if (Model.Count() == 0)
+                {
+                            <h4 style="text-align: center; color: rgb(206, 116, 116); font-weight: bold;"> No Rangers found !</h4>
+                }
+            </div>
+        </form>
+
+        
+    </div>
 </body>
+</html>

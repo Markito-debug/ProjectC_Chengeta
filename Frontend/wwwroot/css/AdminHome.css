@@ -1,0 +1,111 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #ebdbdb;
+}
+
+.wrapper {
+    width: 380px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-bottom: 5%;
+}
+
+.wrapper .logo {
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    width: 50%;
+}
+    
+
+
+    .wrapper .bx-user {
+        background: rgb(206, 116, 116);
+        line-height: 80px;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px 5px 0 0;
+        font-size: 50px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .wrapper h1 {
+        text-align: center;
+        margin: 3%;
+    }
+
+
+    .wrapper form .row {
+        color: #fff;
+        text-decoration-color: #fff;
+        height: 45px;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .wrapper form .row input {
+        border-radius: 5px;
+        background: rgb(206, 116, 116);
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding-left: 5%;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 15px;
+    }
+
+
+    .wrapper form .row input:focus {
+        border-bottom-width: 2px;
+        color: #fff;
+    }
+
+
+
+    .wrapper form .bck_button input {
+        border-radius: 5px;
+        background: rgb(206, 116, 116);
+        color: #fff;
+        margin-left: 5%;
+        margin-top: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 12px;
+    }
+    .wrapper .bck_button input:hover {
+        background: rgb(228, 144, 144);
+        cursor: pointer;
+    }
+
+
+    .wrapper form .button input:hover {
+        background: rgb(228, 144, 144);
+        cursor: pointer;
+    }
+
+ 
+
+    

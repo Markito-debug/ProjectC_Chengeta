@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Testapplication1.Models;
+using Testapplication1.Services;
 using Testapplication1.Views.Services;
 
 namespace Testapplication1.Controllers
@@ -15,7 +16,7 @@ namespace Testapplication1.Controllers
                 var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
                 return recentNotifs != null ?
                                 View(recentNotifs) :
-                                Problem("Entity set 'DBModel.Notifs'  is null.");
+                                Problem("Entity set 'DBModel.Notifs' is null.");
             }
         }
 
@@ -47,5 +48,76 @@ namespace Testapplication1.Controllers
             SaveNotif.SavedNotification(id);
             return RedirectToAction("Index", "Notifications");
         }
+
+
+        public JsonResult GetBranch()
+        {
+            using (var context = new DatabaseConnect())
+            {
+                List<Notification> branches = new List<Notification>();
+                var recentNotifs = context.Notifs.OrderByDescending(x => x.Time).Take(10).ToList();
+                return Json(recentNotifs);
+            }
+        }  
+            
+        public IActionResult StatusToOpen(Guid id)
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
+                if (!(statusChange.Status == "Open"))
+                {
+                    statusChange.Status = "Open";
+                }
+                
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Details", "Notifications", new { ID = id });
+        }
+
+        public IActionResult StatusToProgress(Guid id)
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
+                if (!(statusChange.Status == "In Progress"))
+                {
+                    statusChange.Status = "In Progress";
+                }
+
+                var rangerNotifCon = new ConnectionTable(Guid.NewGuid(), UserDAO.CurrentRanger.RangerID, id);
+                context.Connections.AddRange(rangerNotifCon);
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Details", "Notifications", new { ID = id });
+        }
+
+        public IActionResult StatusToClosed(Guid id)
+        {
+            using (var context = new DatabaseConnect())
+            {
+                var statusChange = context.Notifs.Where(x => x.ID == id).FirstOrDefault();
+                if (!(statusChange.Status == "Closed"))
+                {
+                    statusChange.Status = "Closed";
+                }
+
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Details", "Notifications", new { ID = id });
+        }
+
+        public IActionResult ReturnHome()
+        {
+            if (UserDAO.CurrentRanger.IsAdmin)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            return RedirectToAction("Index", "Ranger");
+        }
     }
 }
+    

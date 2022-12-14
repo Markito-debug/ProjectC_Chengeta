@@ -69,7 +69,8 @@ public class AdminController : Controller
                  View(active) :
                  Problem("No ranger is found.");
          }
-     }   
+     }
+    
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

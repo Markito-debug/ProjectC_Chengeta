@@ -4,7 +4,7 @@
     
 }
 
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,8 +22,14 @@
     </style>
 </head>
 <body>
+<div class="alert-danger">    
+    @if (TempData["LoginFlag"] != null)
+    {
+        @TempData["LoginFlag"];
+    }
+</div>
 <div class="row">
-    
+
     <div class="col-md-4">
         <form asp-action="ProcessLogin">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -43,5 +49,45 @@
         </form>
     </div>
 </div>
+</body>
+</html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Import image library -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <i class='bx bx-user'></i>
+        <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo">
+        <form asp-action="ProcessLogin">
+            <div class="row">
+                <input asp-for="Username" placeholder="Username" required />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <input asp-for="Password" class="password" type="password" required placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <i class='bx bx-hide eye-icon'></i>
+            </div>
+            <div class="row button">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+
+    <script src="~/js/app.js"></script>
 </body>
 </html>

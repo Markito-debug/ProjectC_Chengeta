@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    margin: auto;
+    background: #ebdbdb;
+}
+
+.wrapper {
+    width: 380px;
+    background: #fff;
+    border-radius: 5px;
+    padding-bottom: 5%;
+
+}
+.wrapper .bx-alarm-exclamation {
+    background: rgb(206, 116, 116);
+    line-height: 80px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper .bck_button input {
+    border-radius: 5px;
+    background: rgb(206, 116, 116);
+    color: #fff;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 12px;
+}
+
+.wrapper .bck_button input:hover {
+    background: rgb(228, 144, 144);
+    cursor: pointer;
+}
+    .wrapper .label-text {
+        text-align: center;
+        margin-bottom: 20px;
+        margin: 5%;
+        border-radius: 100px;
+        color: #fff;
+        background: rgb(206, 116, 116);
+    }
+
+.content-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: auto;
+    
+    font-size: 0.8em;
+    min-width: 200px;
+    max-width: 300px;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.content-table thead tr {
+    background-color: rgb(206, 116, 116);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+.content-table th i{
+    font-size: 35px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.content-table th i:hover{
+    cursor: pointer;
+    color: #ebdbdb;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(206, 116, 116);
+}
+
+.content-table tbody tr td audio{
+    width: 100px;
+    border-radius: 50px;
+    background: pink;
+}
+
+.content-table tbody tr td .Detail_button {
+    background: rgb(206, 116, 116);
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,188 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #ebdbdb;
+}
+.wrapper {
+    width: 380px;
+    background: #fff;
+    border-radius: 5px;
+    padding-bottom: 5%;
+    
+}
+
+.wrapper .bx-alarm-exclamation {
+    background: rgb(206, 116, 116);
+    line-height: 80px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper h1 {
+    text-align: center;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.wrapper .container-fluid {
+    margin-top: 20px;
+}
+
+.wrapper .label-text {
+   
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 5%;
+    border-radius: 100px;
+    color: #fff;
+    background: rgb(206, 116, 116);
+}
+
+.wrapper .data {
+    text-align: center;
+    width: 80%;
+    height: 55px;
+    padding-top: 5%;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.wrapper label audio {
+    width: 200px;
+    margin-top: -10px;
+}
+    .wrapper form .bck_button input {
+        border-radius: 5px;
+        background: rgb(206, 116, 116);
+        color: #fff;
+        margin-left: 5%;
+        margin-top: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 12px;
+    }
+.wrapper form .bck_button input:hover {
+    background: rgb(228, 144, 144);
+    cursor: pointer;
+}
+    .wrapper form .row {
+        color: #fff;
+        text-decoration-color: #fff;
+        height: 45px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .wrapper form .row input {
+        border-radius: 5px;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 15px;
+    }
+
+.close input{
+    background: rgb(255,20,20) ;
+    border-radius: 5px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.in_progress input{
+    background: rgb(255,196,20);
+    border-radius: 5px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.open input{
+    background: rgb(14,181,8);
+    border-radius: 5px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+.close:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.in_progress:hover {
+    background: rgb(255,205,36);
+    cursor: pointer;
+}
+
+.open:hover {
+    background: rgb(13,192,6);
+    cursor: pointer;
+}
+
+
+
+        .wrapper form .notes-textbox {
+            height: 80px;
+            /* background: #ff000f; */
+            margin-bottom: 15px;
+            margin: 20px;
+            position: relative;
+        }
+
+.wrapper form .notes-textbox input {
+    border-radius: 5px;
+    background: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.wrapper form .notes-textbox input:focus {
+    border-bottom-width: 2px;
+}
+/*.wrapper form .button input {
+    background: rgb(228, 144, 144);
+    cursor: pointer;
+}*/

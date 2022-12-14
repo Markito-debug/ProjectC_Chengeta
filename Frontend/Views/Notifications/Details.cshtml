@@ -4,14 +4,13 @@
 @{
     ViewData["Title"] = "Details";
 }
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/notification-Info.css">
+    <link rel="stylesheet" href="css/Notif-INFO.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,81 +18,276 @@
     <title>Notifications</title>
 </head>
 <body>
-    <h1>Notification</h1>
-    <div class="bck_button">
-        <input type="button" value="Save Notification" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
-    </div>
-    <div>
-        <hr/>
-        <h1>Location</h1>
-        <div class="container-fluid">
-            <iframe class="well well-sm col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314924.2082984722!2d4.210647798207174!3d51.92765354017547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2sRotterdam!5e0!3m2!1sen!2snl!4v1666347054157!5m2!1sen!2snl" 
-             height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+    <div class="wrapper">
+        <h1>Notification</h1>
+        <div class="bck_button">
+            <input type="button" value="Save Notification" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'"/>
         </div>
-        <dl class="row">
-            <dt class="col-sm-2">
-                <h1>Date and Time</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Time)</h2>
-            </dd>
-            <dt class="col-sm-2">
-                <h1>NodeID</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.NodeID)</h2>
-            </dd>
-            <dt class="col-sm-2">
-                <h1>Soundtype</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Sound_Type)</h2>
-            </dd>
-            <dt class="col-sm-2">
-                <h1>Certainty</h1>
-            </dt>
-            <dd class="col-sm-10">
-                <h2>@Html.DisplayFor(model => model.Probability)</h2>
-            </dd>
-        </dl>
         <div>
-            <h1>Soundclip</h1>
-            <div class="label-text">
-                <audio controls>
-                    <source src="@ViewBag.Sound"/>
-                    Your browser does not support the audio element.
-                </audio>
+            <hr/>
+            <h1>Location</h1>
+            <div class="container-fluid">
+                <iframe class="well well-sm col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314924.2082984722!2d4.210647798207174!3d51.92765354017547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2sRotterdam!5e0!3m2!1sen!2snl!4v1666347054157!5m2!1sen!2snl" 
+                 height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-            <h1>Status</h1>
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text1"></label>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <h1>Date and Time</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.Time)</h2>
+                </dd>
+                <dt class="col-sm-2">
+                    <h1>NodeID</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.NodeID)</h2>
+                </dd>
+                <dt class="col-sm-2">
+                    <h1>Soundtype</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.Sound_Type)</h2>
+                </dd>
+                <dt class="col-sm-2">
+                    <h1>Certainty</h1>
+                </dt>
+                <dd class="col-sm-10">
+                    <h2>@Html.DisplayFor(model => model.Probability)</h2>
+                </dd>
+            </dl>
+            <div>
+                <h1>Soundclip</h1>
+                <div class="label-text">
+                    <audio controls>
+                        <source src="@ViewBag.Sound"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <h1>Status</h1>
+                <div class="checkbox">
+                    <input type="checkbox" id="Open" name="Open" checked>
+                    <label for="Open" class="text1">Open</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="In Progress" name="In Progress">
+                    <label for="In Progress" class="text1">In Progress</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="Ignore" name="Ignore">
+                    <label for="Ignore" class="text1">Ignore</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="Completed" name="Completed">
+                    <label for="Completed" class="text1">Completed</label>
+                </div>
+
+
+                <h1>Notes</h1>
+                <div class="notes-textbox">
+                    <input type="text" placeholder="Type here">
+                </div>
+            </div>
+        </div>
+
+        <div class="bck_button">
+            <input type="button" value="Back To Notification Overview" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
+        </div>
+    </div>
+</body>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/NotificationDetail.css" asp-append-version="true">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+          crossorigin="" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        .map {
+            width: 90%;
+            height: 300px;
+            margin: 5%;
+        }
+    </style>
+    <title>Notifications</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <i class='bx bx-alarm-exclamation'></i>
+        <form action="#">
+            <div class="bck_button">
+                <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Notifications")'" />
+                <input type="button" value="Save PDF" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'" />
+            </div>
+            <div class="save-notification">
+                
+            </div>
+            <h1 class="label-text">Location</h1>
+
+            <div id="map" class="map"></div>
+
+            <h1 class="label-text">Time and date</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.Time)
+                </label>
+            </div>
+            <h1 class="label-text">Node</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.NodeID)
+                </label>
+            </div>
+            
+            <h1 class="label-text">Soundtype</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.Sound_Type)
+                </label>
+            </div>
+            <h1 class="label-text">Certainty</h1>
+            <div class="data">
+                <label>
+                    @Html.DisplayFor(model => model.Probability)%
+                </label>
+            </div>
+            <h1 class="label-text">Soundclip</h1>
+            <div class="data">
+                <label>
+                    <audio controls>
+                        <source src="@ViewBag.Sound" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </label>
+            </div>
+            <h1 class="label-text">Change Status</h1>
+            <div class="data">
+                @if(Model.Status == "Open"){
+                    <label style="color: rgb(14,181,8)">
+                        Current status: @Html.DisplayFor(model => model.Status)
+                    </label>
+                }
+                else if (Model.Status == "In Progress"){
+                    <label style="color: rgb(255,196,20)">
+                        Current status: @Html.DisplayFor(model => model.Status)
+                    </label>
+                }
+                else{
+                    <label style="color: rgb(255,20,20)">
+                        Current status: @Html.DisplayFor(model => model.Status)
+                    </label>
+                }
+                
+            </div>
+            <div class=" row open">
+                <input  type="button"  value="Change Status to Open" onclick="location.href='@Url.Action("StatusToOpen", "Notifications", new { id = Model.ID })'" />
+            </div>
+            <div class="row in_progress">
+                <input  type="button"  value="Change Status to In Progress" onclick="location.href='@Url.Action("StatusToProgress", "Notifications", new { id = Model.ID })'" />
+            </div>
+            <div class="row close">
+                <input  type="button"  value="Change Status to Closed" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'" />
             </div>
 
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text2"></label>
-            </div>
-
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text3"></label>
-            </div>
-
-            <div class="checkbox">
-                <input type="checkbox">
-                <label for="" class="text4"></label>
-            </div>
-
-            <h1>Notes</h1>
+            <h1 class="label-text">Notes</h1>
             <div class="notes-textbox">
                 <input type="text" placeholder="Type here">
             </div>
-        </div>
+        </form>
     </div>
 
-    <div class="bck_button">
-        <input type="button" value="Back To Notification Overview" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
-    </div>
+    <script>
+        var latitude = '@Model.Latitude';
+        var longitude = '@Model.Longitude';
+        var map = L.map("map", {
+            minZoom: 0,
+            maxZoom: 16,
+
+        }).setView([0, 0], 3);
+        L.tileLayer("https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=vbWSgaVomjqBXBlqx78m", {
+            // attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        }).addTo(map)
+
+
+        var southWest = L.latLng(-89.98155760646617, -180),
+            northEast = L.latLng(89.99346179538875, 180);
+        var bounds = L.latLngBounds(southWest, northEast);
+
+        map.setMaxBounds(bounds);
+        map.on('drag', function () {
+            map.panInsideBounds(bounds, { animate: false });
+        });
+
+        map.attributionControl.setPrefix("Chengeta Wildlife")
+        map.flyTo([parseFloat(latitude), parseFloat(longitude)], 8)
+        map.locate({ setView: true, maxZoom: 16 });
+
+        var marker = L.marker([parseFloat(latitude), parseFloat(longitude)]).addTo(map).bindPopup("Latitude: " + '@Model.Latitude' + "<br>" + "Longitude: " + '@Model.Longitude' + "<br>" + "Sound type: " + '@Model.Sound_Type' + "<br>" + "Probability: " + '@Model.Probability' + "%");
+        var rangerIcon = L.icon({
+            iconUrl: "./wwwroot/images/Ranger.png",
+            iconAnchor: [15, 25],
+            iconSize: [27.5, 37.5]
+        })
+
+
+        function onLocationFound(e) {
+            var radius = e.accuracy;
+
+
+            L.marker(e.latlng, { icon: rangerIcon }).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+        }
+
+        map.on('locationfound', onLocationFound);
+
+        function onLocationError(e) {
+            alert(e.message);
+        }
+
+        map.on('locationerror', onLocationError);
+
+        navigator.geolocation.watchPosition(render);
+
+        
+
+        //function getDistance(origin, destination) {
+        //    // return distance in meters
+        //    var lon1 = toRadian(origin[1]),
+        //        lat1 = toRadian(origin[0]),
+        //        lon2 = toRadian(destination[1]),
+        //        lat2 = toRadian(destination[0]);
+
+        //    var deltaLat = lat2 - lat1;
+        //    var deltaLon = lon2 - lon1;
+
+        //    var a = Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon / 2), 2);
+        //    var c = 2 * Math.asin(Math.sqrt(a));
+        //    var EARTH_RADIUS = 6371;
+        //    return c * EARTH_RADIUS * 1000;
+        //}
+        //function toRadian(degree) {
+        //    return degree * Math.PI / 180;
+        //}
+        //var distance = getDistance([lat1, lng1], [lat2, lng2])
+
+    </script>
+
+    
+
 </body>
+</html>

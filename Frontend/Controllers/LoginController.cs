@@ -14,16 +14,22 @@ namespace Testapplication1.Controllers
 
         public IActionResult ProcessLogin(Rangers model)
         {
+            if (model.Username == null || model.Password == null) 
+            {
+                TempData["LoginFlag"] = "You are required to fill in both fields";
+                return RedirectToAction("Index", "Login");
+            }
             if (UserDAO.FindUser(model)=="Admin")
             {
                 return RedirectToAction("Index", "Admin");
             } 
             else if (UserDAO.FindUser(model) == "Ranger")
             {
-                return RedirectToAction("Index", "Notifications");
+                return RedirectToAction("Index", "Ranger");
             }
             else
             {
+                TempData["LoginFlag"] = "Invalid username or Password";
                 return RedirectToAction("Index", "Login");
             }
         }
@@ -32,7 +38,7 @@ namespace Testapplication1.Controllers
         {
             using (var context = new DatabaseConnect())
             {
-                var ranger = context.Ranger.Where(x=>x.RangerID == UserDAO.CurrentRanger.RangerID).First();
+                var ranger = context.Ranger.Where(x=>x.RangerID == UserDAO.CurrentRanger.RangerID).FirstOrDefault();
                 ranger.LoggedIn = false;
                 context.SaveChanges();
             }

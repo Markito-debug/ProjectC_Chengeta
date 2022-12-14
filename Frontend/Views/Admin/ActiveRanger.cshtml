@@ -8,60 +8,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active Ranger</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="stylesheet" href="~/css/ActiveRanger.css" asp-append-version="true">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<h2>List of all active rangers</h2>
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.RangerName)
-        </th>
-         <th>
-             @Html.DisplayNameFor(model => model.IsAdmin)
-         </th>       
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-    </tr>
-    </thead>
-    <tbody>
-    @if (Model.Count() == 0)
-    {
-        <h4> No active Rangers </h4>
-    }
-    else
-    {
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RangerName)
-                </td>
-                <td>
-                    @if (item.IsAdmin)
+    <div class="wrapper">
+        <i class='bx bx-male-female'></i>
+        <div class="bck_button">
+            <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Admin")'" />
+        </div>
+        <h2 style="text-align: center;">List of Active Rangers</h2>
+        <div style="overflow-x:auto;  margin:5%;">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Role
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count() == 0)
                     {
-                        <p5>Yes</p5>
+                        <h2d> No active Rangers </h2d>
                     }
                     else
                     {
-                        <p6>No</p6>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Username)
+                                </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                @if (item.IsAdmin)
+                                {
+                                    <td>
+                                        Admin
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>
+                                        Ranger
+                                    </td>
+                                }
+                            </tr>
+                        }
                     }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-            </tr>
-        }        
-    }
-    </tbody>
-</table>
-<div class="bck_button">
-    <input type="button" value="Back To Admin Screen" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Admin")'"/>
-</div>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
 </body>
-
+</html>
