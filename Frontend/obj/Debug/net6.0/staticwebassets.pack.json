@@ -9,8 +9,32 @@
       "PackagePath": "staticwebassets\\css\\ADDranger.css"
     },
     {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\AddNewRanger.css",
+      "PackagePath": "staticwebassets\\css\\AddNewRanger.css"
+    },
+    {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\AdminHome.css",
+      "PackagePath": "staticwebassets\\css\\AdminHome.css"
+    },
+    {
       "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\DELETEranger.css",
       "PackagePath": "staticwebassets\\css\\DELETEranger.css"
+    },
+    {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\Notif-INFO.css",
+      "PackagePath": "staticwebassets\\css\\Notif-INFO.css"
+    },
+    {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\Notification.css",
+      "PackagePath": "staticwebassets\\css\\Notification.css"
+    },
+    {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\NotificationDetail.css",
+      "PackagePath": "staticwebassets\\css\\NotificationDetail.css"
     },
     {
       "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\main.css",
@@ -29,10 +53,6 @@
       "PackagePath": "staticwebassets\\css\\styleIndex.css"
     },
     {
-      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\css\\welcome.css",
-      "PackagePath": "staticwebassets\\css\\welcome.css"
-    },
-    {
       "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -43,6 +63,10 @@
     {
       "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\images\\chengeta_wildlife.png",
       "PackagePath": "staticwebassets\\images\\chengeta_wildlife.png"
+    },
+    {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
     },
     {
       "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\js\\site.js",
