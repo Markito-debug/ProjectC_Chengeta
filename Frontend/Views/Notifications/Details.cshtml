@@ -117,9 +117,9 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <style>
         .map {
-            width: 85%;
+            width: 90%;
             height: 300px;
-            margin: auto;
+            margin: 5%;
         }
     </style>
     <title>Notifications</title>
@@ -176,21 +176,34 @@
             </div>
             <h1 class="label-text">Change Status</h1>
             <div class="data">
-                <label>
-                    Current status: @Html.DisplayFor(model => model.Status)
-                </label>
+                @if(Model.Status == "Open"){
+                    <label style="color: rgb(14,181,8)">
+                        Current status: @Html.DisplayFor(model => model.Status)
+                    </label>
+                }
+                else if (Model.Status == "In Progress"){
+                    <label style="color: rgb(255,196,20)">
+                        Current status: @Html.DisplayFor(model => model.Status)
+                    </label>
+                }
+                else{
+                    <label style="color: rgb(255,20,20)">
+                        Current status: @Html.DisplayFor(model => model.Status)
+                    </label>
+                }
+                
             </div>
-            <div class="row button">
-                <input type="button"  style="background: Green" value="Change Status to Open" onclick="location.href='@Url.Action("StatusToOpen", "Notifications", new { id = Model.ID })'"/>
+            <div class=" row open">
+                <input  type="button"  value="Change Status to Open" onclick="location.href='@Url.Action("StatusToOpen", "Notifications", new { id = Model.ID })'" />
             </div>
-            <div class="row button">
-                <input type="button" style="background: Orange" value="Change Status to In Progress" onclick="location.href='@Url.Action("StatusToProgress", "Notifications", new { id = Model.ID })'" />
+            <div class="row in_progress">
+                <input  type="button"  value="Change Status to In Progress" onclick="location.href='@Url.Action("StatusToProgress", "Notifications", new { id = Model.ID })'" />
             </div>
-            <div class="row button">
-                <input type="button" style="background: Red" value="Change Status to Closed" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'" />
+            <div class="row close">
+                <input  type="button"  value="Change Status to Closed" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'" />
             </div>
-            
-            <h1>Notes</h1>
+
+            <h1 class="label-text">Notes</h1>
             <div class="notes-textbox">
                 <input type="text" placeholder="Type here">
             </div>

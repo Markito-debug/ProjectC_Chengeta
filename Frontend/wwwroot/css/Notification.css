@@ -5,8 +5,9 @@
 }
 html, body {
     display: grid;
-    margin: auto;
+    height: 100%;
     place-items: center;
+    margin: auto;
     background: #ebdbdb;
 }
 
@@ -14,7 +15,8 @@ html, body {
     width: 380px;
     background: #fff;
     border-radius: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 5%;
+
 }
 .wrapper .bx-alarm-exclamation {
     background: rgb(206, 116, 116);
@@ -30,8 +32,8 @@ html, body {
     border-radius: 5px;
     background: rgb(206, 116, 116);
     color: #fff;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 5%;
+    margin-top: 5%;
     margin-bottom: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -45,16 +47,25 @@ html, body {
     background: rgb(228, 144, 144);
     cursor: pointer;
 }
+    .wrapper .label-text {
+        text-align: center;
+        margin-bottom: 20px;
+        margin: 5%;
+        border-radius: 100px;
+        color: #fff;
+        background: rgb(206, 116, 116);
+    }
 
 .content-table {
     border-collapse: collapse;
     border-spacing: 0;
-   
+    margin: auto;
+    
     font-size: 0.8em;
     min-width: 200px;
     max-width: 300px;
     background: #ffffff;
-    /*border-radius: 5px;*/
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tWYavwnQPLV4g7dsaLr/fWAymQlpjCuUrlQt0xqcAf0=",
+  "Hash": "JlhZEZNR2TeDPsF3Ch2mEZUu0S1KSNEwCJiP0WAOGn8=",
   "Source": "Frontend",
   "BasePath": "_content/Frontend",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Frontend.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\ActiveRanger.css",
+      "SourceId": "Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\",
+      "BasePath": "_content/Frontend",
+      "RelativePath": "css/ActiveRanger.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ActiveRanger.css"
     },
     {
       "Identity": "C:\\Users\\Gebruiker\\OneDrive\\Documents\\GitHub\\ProjectC_renewed\\Frontend\\wwwroot\\css\\AddNewRanger.css",

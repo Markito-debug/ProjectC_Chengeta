@@ -59,7 +59,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link rel="stylesheet" href="~/css/Login.css">
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Import image library -->
@@ -74,8 +74,6 @@
         <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo">
         <form asp-action="ProcessLogin">
             <div class="row">
-                <!-- User image supposidly -->
-                <i class="fas fa-user"></i>
                 <input asp-for="Username" placeholder="Username" required />
                 <span asp-validation-for="Username" class="text-danger"></span>
             </div>
@@ -84,7 +82,6 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
                 <i class='bx bx-hide eye-icon'></i>
             </div>
-            @*<div class="pass"><a href="#">Forgot Password?</a></div>*@
             <div class="row button">
                 <input type="submit" value="Login">
             </div>

@@ -17,7 +17,8 @@ html, body {
     width: 380px;
     background: #fff;
     border-radius: 5px;
-    /*margin-top: 10%;*/
+    padding-bottom: 5%;
+    
 }
 
 .wrapper .bx-alarm-exclamation {
@@ -41,11 +42,10 @@ html, body {
 }
 
 .wrapper .label-text {
-    margin-top: 20px;
+   
     text-align: center;
     margin-bottom: 20px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 5%;
     border-radius: 100px;
     color: #fff;
     background: rgb(206, 116, 116);
@@ -66,19 +66,19 @@ html, body {
     width: 200px;
     margin-top: -10px;
 }
-.wrapper form .bck_button input {
-    border-radius: 5px;
-    background: rgb(206, 116, 116);
-    color: #fff;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid rgb(206, 116, 116);
-    font-size: 12px;
-}
+    .wrapper form .bck_button input {
+        border-radius: 5px;
+        background: rgb(206, 116, 116);
+        color: #fff;
+        margin-left: 5%;
+        margin-top: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 12px;
+    }
 .wrapper form .bck_button input:hover {
     background: rgb(228, 144, 144);
     cursor: pointer;
@@ -89,12 +89,11 @@ html, body {
         height: 45px;
         margin-bottom: 15px;
         margin-top: 15px;
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-left: 15%;
+        margin-right: 15%;
     }
     .wrapper form .row input {
-        border-radius: 50px;
-        
+        border-radius: 5px;
         color: #fff;
         height: 100%;
         width: 100%;
@@ -105,15 +104,68 @@ html, body {
         font-size: 15px;
     }
 
-
-
-.wrapper form .notes-textbox {
-    height: 80px;
-    /* background: #ff000f; */
-    margin-bottom: 15px;
-    margin: 20px;
-    position: relative;
+.close input{
+    background: rgb(255,20,20) ;
+    border-radius: 5px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
 }
+
+.in_progress input{
+    background: rgb(255,196,20);
+    border-radius: 5px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+
+.open input{
+    background: rgb(14,181,8);
+    border-radius: 5px;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid rgb(206, 116, 116);
+    font-size: 15px;
+}
+.close:hover {
+    background: black;
+    cursor: pointer;
+}
+
+.in_progress:hover {
+    background: rgb(255,205,36);
+    cursor: pointer;
+}
+
+.open:hover {
+    background: rgb(13,192,6);
+    cursor: pointer;
+}
+
+
+
+        .wrapper form .notes-textbox {
+            height: 80px;
+            /* background: #ff000f; */
+            margin-bottom: 15px;
+            margin: 20px;
+            position: relative;
+        }
 
 .wrapper form .notes-textbox input {
     border-radius: 5px;
@@ -130,3 +182,7 @@ html, body {
 .wrapper form .notes-textbox input:focus {
     border-bottom-width: 2px;
 }
+/*.wrapper form .button input {
+    background: rgb(228, 144, 144);
+    cursor: pointer;
+}*/

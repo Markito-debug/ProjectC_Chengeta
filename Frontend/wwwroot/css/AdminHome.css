@@ -18,7 +18,7 @@ html, body {
     width: 380px;
     background: rgb(255, 255, 255);
     border-radius: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 5%;
 }
 
 .wrapper .logo {
@@ -31,6 +31,7 @@ html, body {
     margin-bottom: -10px;
     width: 50%;
 }
+    
 
 
     .wrapper .bx-user {
@@ -54,11 +55,10 @@ html, body {
         color: #fff;
         text-decoration-color: #fff;
         height: 45px;
-        margin-bottom: 15px;
-        margin-top: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        
+        margin-bottom: 3%;
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .wrapper form .row input {
@@ -80,61 +80,31 @@ html, body {
         color: #fff;
     }
 
-.wrapper form .row .eye-icon {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: rgb(206, 116, 116);
-    cursor: pointer;
-    padding: 5px;
-}
-
-.wrapper form .row .eye-icon:hover {
-    color: rgb(228, 144, 144);
-}
 
 
+    .wrapper form .bck_button input {
+        border-radius: 5px;
+        background: rgb(206, 116, 116);
+        color: #fff;
+        margin-left: 5%;
+        margin-top: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 12px;
+    }
+    .wrapper .bck_button input:hover {
+        background: rgb(228, 144, 144);
+        cursor: pointer;
+    }
 
 
-.wrapper form .bck_button input {
-    border-radius: 5px;
-    background: rgb(206, 116, 116);
-    color: #fff;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid rgb(206, 116, 116);
-    font-size: 12px;
-}
-
-
-.wrapper form .button input:hover {
-    background: rgb(228, 144, 144);
-}
-
-.wrapper form .pass {
-    margin: 0 0 15px 0;
-}
-
-.wrapper form .pass a {
-    text-decoration: none;
-    color: rgb(206, 116, 116);
-    font-weight: 500;
-}
-
-.wrapper form .pass a:hover {
-    text-decoration: underline;
-}
-
-
-.wrapper form .bck_button input:hover {
-    background: rgb(228, 144, 144);
-}
+    .wrapper form .button input:hover {
+        background: rgb(228, 144, 144);
+        cursor: pointer;
+    }
 
  
 
