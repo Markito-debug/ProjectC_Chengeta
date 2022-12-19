@@ -1,3 +1,4 @@
+using System.Configuration;
 using System.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using Testapplication1.Models;
@@ -7,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DatabaseConnect>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

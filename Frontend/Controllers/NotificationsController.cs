@@ -116,7 +116,7 @@ namespace Testapplication1.Controllers
             {
                 return RedirectToAction("Index", "Admin");
             }
-            return RedirectToAction("Index", "Ranger");
+            return RedirectToAction("Index", "Notifications");
         }
     }
 }

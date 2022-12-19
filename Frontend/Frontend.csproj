@@ -27,6 +27,7 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Login\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ranger\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

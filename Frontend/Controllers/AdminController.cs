@@ -28,19 +28,18 @@ public class AdminController : Controller
     {
         using (var context = new DatabaseConnect())
         {
-            var allRangers = context.Ranger.OrderBy(x => x.RangerName).ToList();
+            var allRangers = context.Ranger.OrderBy(x => x.RangerName).Where(s =>s.RangerID != UserDAO.CurrentRanger.RangerID).ToList();
             return allRangers != null ?
                 View(allRangers) :
                 Problem("Entity set 'DBModel.Ranger'  is null.");
         }
-        //return View();
     }
 
   public IActionResult ShowResult(string Searched)
    {
        using (var context = new DatabaseConnect())
        {
-           var searched = context.Ranger.Where(s=>s.RangerName.Contains(Searched)).ToList();
+           var searched = context.Ranger.Where(s=>s.RangerName.Contains(Searched) && s.RangerName != UserDAO.CurrentRanger.RangerName).ToList();
            return searched != null ?
                View(searched) :
                Problem("No ranger is found.");
