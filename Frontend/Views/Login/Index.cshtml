@@ -3,55 +3,6 @@
 @{
     
 }
-
-@*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/styleIndex.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo" style="width: 300px; height: 300px; margin-top: -250px ">
-    <style>
-    form{
-        width: 300px;
-    }
-    </style>
-</head>
-<body>
-<div class="alert-danger">    
-    @if (TempData["LoginFlag"] != null)
-    {
-        @TempData["LoginFlag"];
-    }
-</div>
-<div class="row">
-
-    <div class="col-md-4">
-        <form asp-action="ProcessLogin">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Username" class="control-label"></label>
-                <input asp-for="Username" class="form-control"/>
-                <span asp-validation-for="Username" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" type="password"/>
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" style="background: rgb(206, 116, 116); color: #fff"/>
-            </div>
-        </form>
-    </div>
-</div>
-</body>
-</html>*@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,12 +24,18 @@
         <i class='bx bx-user'></i>
         <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo">
         <form asp-action="ProcessLogin">
+        <div class="alert-danger">    
+            @if (TempData["LoginFlag"] != null)
+            {
+                @TempData["LoginFlag"];
+            }
+        </div>
             <div class="row">
-                <input asp-for="Username" placeholder="Username" required />
+                <input asp-for="Username" placeholder="Username" />
                 <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="row">
-                <input asp-for="Password" class="password" type="password" required placeholder="Password" />
+                <input asp-for="Password" class="password" type="password" placeholder="Password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
                 <i class='bx bx-hide eye-icon'></i>
             </div>
