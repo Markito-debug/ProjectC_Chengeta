@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Testapplication1.Services
 @model IEnumerable<Notification>
 
 @{
@@ -30,9 +31,16 @@
 <body>
     <div class="wrapper">
     <i class='bx bx-alarm-exclamation'></i>
-    <div class="bck_button">
-            <input type="button" value=" Back to Home" onclick="location.href='@Url.Action("ReturnHome", "Notifications")'" />
-    </div>
+        <div class="bck_button">
+            @if (UserDAO.CurrentRanger.IsAdmin)
+            {
+                <input type="button" value="Back to Home" onclick="location.href='@Url.Action("ReturnHome", "Notifications")'"/>                        
+            }
+            else
+            {
+                <input type="button" value="Logout" onclick="location.href='@Url.Action("ProcessLogout", "Login")'"/>
+            }
+        </div>
         <h1 class="label-text">Notifications</h1>
     <div id="map" class="map"></div>
     <div style="overflow-x:auto;  margin:5%;">

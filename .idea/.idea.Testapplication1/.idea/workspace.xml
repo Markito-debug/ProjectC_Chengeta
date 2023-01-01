@@ -12,13 +12,11 @@
     <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="made possible to change status of a notification">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Views/Login/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Login/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Views/Notifications/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Notifications/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +154,7 @@
       <workItem from="1671461522958" duration="5207000" />
       <workItem from="1671467702319" duration="45000" />
       <workItem from="1671616871046" duration="919000" />
+      <workItem from="1672589131625" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes to frontend">
       <created>1668594224848</created>
