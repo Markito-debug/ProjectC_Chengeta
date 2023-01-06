@@ -3,20 +3,21 @@
     
     font-family: 'Poppins', sans-serif;
 }
-html, body {
-    display: grid;
-    height: 100%;
-    place-items: center;
-    margin: auto;
+body {
     background: #ebdbdb;
 }
 
+.container {
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 80px auto;
+}
+
 .wrapper {
-    width: 380px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
     padding-bottom: 5%;
-
 }
 .wrapper .bx-alarm-exclamation {
     background: rgb(206, 116, 116);
@@ -62,8 +63,8 @@ html, body {
     margin: auto;
     
     font-size: 0.8em;
-    min-width: 200px;
-    max-width: 300px;
+    width: 100%;
+    
     background: #ffffff;
     border-radius: 5px;
     overflow: hidden;

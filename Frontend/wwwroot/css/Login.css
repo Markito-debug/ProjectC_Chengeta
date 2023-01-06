@@ -6,16 +6,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html,body{
-    display: grid;
+body{
+    /*display: grid;
     height: 100%;
     place-items: center;
-    margin: auto;
+    margin: auto;*/
     background: #ebdbdb;
 }
 
+.container {
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 80px auto;
+}
+
 .wrapper{
-    width: 380px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
 }

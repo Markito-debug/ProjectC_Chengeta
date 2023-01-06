@@ -11,30 +11,33 @@
     <title>Admin Home</title>
 </head>
 <body>
-<div class="wrapper">
-    <i class='bx bx-user'></i>
-    <form action="#">
-        
-        <div class="bck_button">
-            <input type="button" value="Logout" onclick="location.href='@Url.Action("ProcessLogout", "Login")'"/>
+    <div class="container">
+        <div class="wrapper">
+            <i class='bx bx-user'></i>
+            <form action="#">
+
+                <div class="bck_button">
+                    <input type="button" value="Logout" onclick="location.href='@Url.Action("ProcessLogout", "Login")'" />
+                </div>
+
+                <h1 class="label-text">Hello Admin</h1>
+                <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo">
+
+                <div class="row button">
+                    <input type="button" value="Active Rangers" onclick="location.href='@Url.Action("ActiveRanger", "Admin")'" />
+                </div>
+                <div class="row button">
+                    <input type="button" value="Notifications" onclick="location.href='@Url.Action("Index", "Notifications")'" />
+                </div>
+                <div class="row button">
+                    <input type="button" value="Add Ranger" onclick="location.href='@Url.Action("AddRanger", "Admin")'" />
+                </div>
+                <div class="row button">
+                    <input type="button" value="Delete Ranger" onclick="location.href='@Url.Action("DeleteRanger", "Admin")'" />
+                </div>
+            </form>
         </div>
-        
-        <h1 class="label-text">Hello Admin</h1>
-        <img src="images/chengeta_wildlife.png" alt="Chengeta Logo" class="logo">
-        
-        <div class="row button">
-            <input type="button" value="Active Rangers" onclick="location.href='@Url.Action("ActiveRanger", "Admin")'"/>
-        </div>
-        <div class="row button">
-            <input type="button" value="Notifications" onclick="location.href='@Url.Action("Index", "Notifications")'"/>
-        </div>
-        <div class="row button">
-            <input type="button" value="Add Ranger" onclick="location.href='@Url.Action("AddRanger", "Admin")'"/>
-        </div>
-        <div class="row button">
-            <input type="button" value="Delete Ranger" onclick="location.href='@Url.Action("DeleteRanger", "Admin")'"/>
-        </div>
-    </form>
-</div>
+    </div>
+    
 </body>
 </html>

@@ -7,16 +7,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-    display: grid;
-    height: 100%;
-    place-items: center;
+body {
     background: #ebdbdb;
 }
 
-.wrapper {
-    width: 380px;
-    background: rgb(255, 255, 255);
+.container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 80px auto;
+}
+.wrapper{
+    width: 100%;
+    background: #fff;
     border-radius: 5px;
     padding-bottom: 5%;
 }

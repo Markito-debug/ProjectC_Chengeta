@@ -4,6 +4,9 @@
 @{
     ViewData["Title"] = "ActiveRanger";
 }
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,62 +15,66 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="wrapper">
-        <i class='bx bx-male-female'></i>
-        <div class="bck_button">
-            <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Admin")'" />
-        </div>
-        <h2 style="text-align: center;">List of Active Rangers</h2>
-        <div style="overflow-x:auto;  margin:5%;">
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>
-                            Username
-                        </th>
-                        <th>
-                            Email
-                        </th>
-                        <th>
-                            Role
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model.Count() == 0)
-                    {
-                        <h2d> No active Rangers </h2d>
-                    }
-                    else
-                    {
-                        @foreach (var item in Model)
+    <div class="container">
+        <div class="wrapper">
+            <i class='bx bx-male-female'></i>
+            <div class="bck_button">
+                <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Admin")'" />
+            </div>
+            <h2 style="text-align: center;">List of Active Rangers</h2>
+            <div style="overflow-x:auto;  margin:5%;">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Username
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Role
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() == 0)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Username)
-                                </td>
+                            <h2d> No active Rangers </h2d>
+                        }
+                        else
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Username)
+                                    </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Email)
                                     </td>
-                                @if (item.IsAdmin)
-                                {
-                                    <td>
-                                        Admin
-                                    </td>
-                                }
-                                else
-                                {
-                                    <td>
-                                        Ranger
-                                    </td>
-                                }
-                            </tr>
+                                    @if (item.IsAdmin)
+                                    {
+                                        <td>
+                                            Admin
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            Ranger
+                                        </td>
+                                    }
+                                </tr>
+                            }
                         }
-                    }
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        
     </div>
+    
     <script src="app.js"></script>
 </body>
+<</html>

@@ -7,18 +7,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-    display: grid;
-    height: 100%;
-    place-items: center;
+body {
     background: #ebdbdb;
 }
+
+.container {
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 80px auto;
+}
+
 .wrapper {
-    width: 380px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
     padding-bottom: 5%;
-    
 }
 
 .wrapper .bx-alarm-exclamation {
@@ -79,7 +82,25 @@ html, body {
         border: 1px solid rgb(206, 116, 116);
         font-size: 12px;
     }
+
+    .wrapper form .bck_button button {
+        border-radius: 5px;
+        background: rgb(206, 116, 116);
+        color: #fff;
+        margin-left: 5%;
+        margin-top: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid rgb(206, 116, 116);
+        font-size: 12px;
+    }
 .wrapper form .bck_button input:hover {
+    background: rgb(228, 144, 144);
+    cursor: pointer;
+}
+.wrapper form .bck_button button:hover {
     background: rgb(228, 144, 144);
     cursor: pointer;
 }
@@ -104,64 +125,70 @@ html, body {
         font-size: 15px;
     }
 
-.close input{
-    background: rgb(255,20,20) ;
+.close input {
+    background: rgb(255,20,20);
     border-radius: 5px;
     color: #fff;
     height: 100%;
-    width: 100%;
+    width: 80%;
     text-align: center;
     font-weight: 500;
     outline: none;
-    border: 1px solid rgb(206, 116, 116);
+    border: 1px solid rgb(255,20,20);
     font-size: 15px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
-.in_progress input{
+.in_progress input {
     background: rgb(255,196,20);
     border-radius: 5px;
     color: #fff;
     height: 100%;
-    width: 100%;
+    width: 80%;
     text-align: center;
     font-weight: 500;
     outline: none;
-    border: 1px solid rgb(206, 116, 116);
+    border: 1px solid rgb(255,196,20);
     font-size: 15px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
-.open input{
+.open input {
     background: rgb(14,181,8);
     border-radius: 5px;
     color: #fff;
     height: 100%;
-    width: 100%;
+    width: 80%;
     text-align: center;
     font-weight: 500;
     outline: none;
-    border: 1px solid rgb(206, 116, 116);
+    border: 1px solid rgb(14,181,8);
     font-size: 15px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
 }
-.close:hover {
-    background: black;
+.close input:hover {
+    background: rgb(250, 60, 60);
     cursor: pointer;
 }
 
-.in_progress:hover {
+.in_progress input:hover {
     background: rgb(255,205,36);
     cursor: pointer;
 }
 
-.open:hover {
+.open input:hover {
     background: rgb(13,192,6);
     cursor: pointer;
 }
 
-
-
         .wrapper form .notes-textbox {
             height: 80px;
-            /* background: #ff000f; */
             margin-bottom: 15px;
             margin: 20px;
             position: relative;
@@ -182,7 +209,3 @@ html, body {
 .wrapper form .notes-textbox input:focus {
     border-bottom-width: 2px;
 }
-/*.wrapper form .button input {
-    background: rgb(228, 144, 144);
-    cursor: pointer;
-}*/

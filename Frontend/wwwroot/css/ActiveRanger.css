@@ -7,16 +7,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-    display: grid;
-    height: 100%;
-    place-items: center;
+body{
+    
     background: #ebdbdb;
 }
-
-.wrapper {
-    width: 380px;
-    background: rgb(255, 255, 255);
+.container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 80px auto;
+}
+.wrapper{
+    width: 100%;
+    background: #fff;
     border-radius: 5px;
     padding-bottom: 5%;
 }
@@ -55,8 +57,7 @@ html, body {
     border-spacing: 0;
     margin: auto;
     font-size: 0.8em;
-    min-width: 320px;
-    max-width: 300px;
+    width: 100%;
     background: #ffffff;
     border-radius: 5px;
     overflow: hidden;

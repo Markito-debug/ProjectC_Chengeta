@@ -75,51 +75,51 @@
 </head>
 <body>
     
-    
-    <div class="wrapper">
-        <i class='bx bx-user-minus'></i>
-        
-        <form asp-action="ShowResult">
-            <div style="margin-bottom: 15px;">
-                <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
-            </div>
-            <h1>Delete Ranger</h1>
-            
-            <div class="search-bar"  style="margin:auto;max-width:300px;">
-                <input type="text" placeholder="Search.." name="Searched">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
-            <div style="overflow-x:auto;">
+    <div class="container">
+        <div class="wrapper">
+            <i class='bx bx-user-minus'></i>
 
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
+            <form asp-action="ShowResult">
+                <div style="margin-bottom: 15px;">
+                    <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
+                </div>
+                <h1>Delete Ranger</h1>
+
+                <div class="search-bar" style="margin:auto;max-width:300px;">
+                    <input type="text" placeholder="Search.." name="Searched">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                <div style="overflow-x:auto;">
+
+                    <table class="content-table">
+                        <thead>
                             <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.RangerName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Email)
-                                </td>
-                                <td>
-                                    <a asp-action="ProcessDeleteRanger" asp-route-id="@item.RangerID" class="Delete_button">Delete Ranger</a>
-                                </td>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th></th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        </form>
-
-        
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RangerName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        <a asp-action="ProcessDeleteRanger" asp-route-id="@item.RangerID" class="Delete_button">Delete Ranger</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
     </div>
+    
 </body>
 </html>

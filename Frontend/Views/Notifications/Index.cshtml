@@ -29,6 +29,7 @@
     <title>Notifications</title>
 </head>
 <body>
+<<<<<<< Updated upstream
     <div class="wrapper">
     <i class='bx bx-alarm-exclamation'></i>
         <div class="bck_button">
@@ -78,7 +79,72 @@
             </tbody>
         </table>
     </div>
+=======
+    <div class="container">
+        <div class="wrapper">
+            <i class='bx bx-alarm-exclamation'></i>
+            <div class="bck_button">
+                <input type="button" value=" Back to Home" onclick="location.href='@Url.Action("ReturnHome", "Notifications")'" />
+            </div>
+            <h1 class="label-text">Notifications</h1>
+            <div id="map" class="map"></div>
+            <div style="overflow-x:auto;  margin:5%;">
+
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <i class='bx bx-refresh' onClick="window.location.reload()"> </i>
+                            </th>
+                            <th>Notifications</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>
+                                    <a asp-action="Details" class="Detail_button" asp-route-id="@item.ID">Details</a>
+                                </td>
+                                <td>
+                                    <audio controls>
+                                        <source src="@(item.Sound)" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio><br>
+                                    @Html.DisplayFor(modelItem => item.Time)<br>
+
+                                    @Html.DisplayFor(modelItem => item.Sound_Type)
+
+                                    @Html.DisplayFor(modelItem => item.Probability)%<br>
+                                    
+                                    @if (item.Status == "Open"){
+                                        <div style="color: green; font-weight: bold">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </div>
+                                    }
+                                    else if (item.Status == "In Progress"){
+                                        <div style="color: yellow; font-weight: bold">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </div>
+                                    }
+                                    else{
+                                        <div style="color: red; font-weight: bold">
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </div>
+                                    }
+                                    
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+>>>>>>> Stashed changes
     </div>
+    
 
     <script>
     
@@ -86,7 +152,7 @@
             minZoom: 0,
             maxZoom: 16,
 
-        }).setView([0, 0], 3);
+        }).setView([0, 20], 3);
         L.tileLayer("https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=vbWSgaVomjqBXBlqx78m", {
             // attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         }).addTo(map)
@@ -101,16 +167,71 @@
         });
 
         map.attributionControl.setPrefix("Chengeta Wildlife")
+        var greenIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        var redIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        var yellowIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        var violetIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+
         
 
         $.ajax({
             url: '/Notifications/GetBranch',
             success: function (data) {
-                console.log(data)
+                
                 $(data).each(function (index, item) {
                     var lat = item.latitude;
                     var long = item.longitude;
-                    L.marker([lat, long]).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
+
+                    if (item.sound_Type == "gunshot") {
+                        L.marker([lat, long], { icon: redIcon }).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
+                    }
+                    else if (item.sound_Type == "animal"){
+                         L.marker([lat, long], { icon: greenIcon }).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
+                    }
+                    else if (item.sound_Type == "thunder"){
+                        L.marker([lat, long], { icon: yellowIcon }).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
+                    }
+                    else if (item.sound_Type == "vehicle"){
+                        L.marker([lat, long], { icon: violetIcon }).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
+                    }
+                    else{
+                        L.marker([lat, long]).addTo(map).bindPopup("Latitude: " + item.latitude + "<br>" + "Longitude: " + item.longitude + "<br>" + "Sound type: " + item.sound_Type + "<br>" + "Probability: " + item.probability + "%");
+                    }
+
+                    
+                    
                 });
             },
         });

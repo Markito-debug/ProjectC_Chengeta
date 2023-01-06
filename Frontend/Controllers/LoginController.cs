@@ -29,7 +29,7 @@ namespace Testapplication1.Controllers
             }
             else
             {
-                TempData["LoginFlag"] = "Invalid username or Password";
+                TempData["LoginFlag"] = "Incorrect username or password!";
                 return RedirectToAction("Index", "Login");
             }
         }
