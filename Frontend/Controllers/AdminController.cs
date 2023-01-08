@@ -59,8 +59,22 @@ public class AdminController : Controller
     
     public IActionResult ProcessAddRanger(Rangers model)
     {
-        UserDAO.AddUser(model);
-        return RedirectToAction("Index", "Admin");
+        using (var context = new DatabaseConnect())
+        {
+            var found = context.Ranger.Where(r => r.Username == model.Username);
+            if (found != null)
+            {
+                TempData["UsernameFlag"] = "Username is already in use";
+                return RedirectToAction("AddRanger", "Admin");
+            }
+            else
+            {
+                UserDAO.AddUser(model);
+                return RedirectToAction("Index", "Admin");
+            }
+        }
+            
+        
     }
     
      public IActionResult ActiveRanger()

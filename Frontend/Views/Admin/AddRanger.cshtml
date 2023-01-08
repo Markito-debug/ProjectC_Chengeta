@@ -32,7 +32,13 @@
                 <h1>Add Ranger</h1>
                 <div style="margin-bottom: 15px;">
                     <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
-                </div>
+                </div>                
+                @if (TempData["UsernameFlag"] != null)
+                  {
+                      <div class="alert-danger" style="padding: 5px;background-color: #f44336;color: white; border-radius: 5px; text-align: center; margin-bottom: 3%;">
+                          @TempData["UsernameFlag"]
+                      </div>
+                  }
                 <div class="row">
                     @*<input type="text" placeholder="Name" required>*@
                     <input asp-for="RangerName" placeholder="Ranger Name" required />

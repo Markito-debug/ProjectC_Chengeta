@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\js\\app.js"
     },
     {
+      "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\js\\savePdf.js",
+      "PackagePath": "staticwebassets\\js\\savePdf.js"
+    },
+    {
       "Id": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
