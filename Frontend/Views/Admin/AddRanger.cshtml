@@ -53,10 +53,6 @@
                     <span asp-validation-for="Password"></span>
                     @*<i class='bx bx-hide eye-icon'></i>*@
                 </div>
-                <!-- <div class="row">
-                    <input type="password" placeholder="Confirm Password" class="password" required>
-                    <i class='bx bx-hide eye-icon'></i>
-                </div> -->
                 <div class="row">
                     <input asp-for="PhoneNumber"  type="text" placeholder="PhoneNumber (Optional)" />
 
@@ -69,8 +65,6 @@
                 </div>
 
                 <div style="margin: 2%; margin-bottom: 5%;">
-                    @*<input type="checkbox" id="admin-access">
-                    <label for="admin-access" style="font-size: 15px; margin-left: 5px;"> Does this person need Admin rights?</label><br>*@
 
                     <input type="checkbox" data-val="true" data-val-required="The IsAdmin field is required." id="IsAdmin" name="IsAdmin" value="true">
                     <input name=" n" type="hidden" value="false">

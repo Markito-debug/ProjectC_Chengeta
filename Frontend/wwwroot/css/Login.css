@@ -7,10 +7,6 @@
 }
 
 body{
-    /*display: grid;
-    height: 100%;
-    place-items: center;
-    margin: auto;*/
     background: #ebdbdb;
 }
 
@@ -57,7 +53,6 @@ body{
 
 .wrapper form .row{
     height: 45px;
-    /* background: #ff000f; */
     margin-bottom: 15px;
     position: relative;
 }
@@ -103,9 +98,6 @@ body{
     font-size: 15px;
 
 }
-/* .wrapper form .button input{
-    padding-left: 0px;
-} */
 
 .wrapper form .button input:hover{
     background: rgb(228, 144, 144);

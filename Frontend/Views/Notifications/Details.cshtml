@@ -47,7 +47,7 @@
             <form action="#">
                 <div class="bck_button">
                     <input type="button" value="Back" onclick="location.href='@Url.Action("Index", "Notifications")'" />
-                    @*<input type="button" value="Save PDF" onclick="location.href='@Url.Action("SaveNotification", "Notifications",new {id=Model.ID })'" />*@
+                    
                     <button class="topdf" onclick="topdf(`@Model.ID`, `@Model.Time`, `@Model.Latitude`, `@Model.Longitude`, `@Model.Sound_Type`, `@Model.Probability`)" download="">Save PDF</button>
                 </div>
                 <div class="save-notification">
@@ -114,16 +114,7 @@
                 <div class="close">
                     <input type="button" value="Change Status to Closed" onclick="location.href='@Url.Action("StatusToClosed", "Notifications", new { id = Model.ID })'" />
                 </div>
-
-                <h1 class="label-text">Notes</h1>
-                <div class="notes-textbox">
-                    @if (Model.Notes == ""){
-                        <input type="text" placeholder="Type here">
-                    }
-                    else{
-                        <input type="text" placeholder="@Model.Notes" on>
-                    }
-                </div>
+             
             </form>
         </div>
     </div>
