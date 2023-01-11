@@ -1,7 +1,4 @@
-using System;
-using System.Security.Cryptography;
 using System.Text;
-using System.Xml;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 

@@ -1,13 +1,11 @@
-﻿using System.Data;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Testapplication1.Models;
 using Testapplication1.Services;
 
 namespace Testapplication1.Controllers;
-
+[Authorize(Roles = "Admin")]
 public class AdminController : Controller
 {
     private readonly ILogger<AdminController> _logger;
@@ -59,11 +57,9 @@ public class AdminController : Controller
     
     public IActionResult ProcessAddRanger(Rangers model)
     {
-        using (var context = new DatabaseConnect())
-        {
-                UserDAO.AddUser(model);
-                return RedirectToAction("Index", "Admin");
-        }
+
+        UserDAO.AddUser(model);
+        return RedirectToAction("Index", "Admin");
     }
     
      public IActionResult ActiveRanger()

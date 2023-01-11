@@ -305,3 +305,11 @@ C:\Users\Gebruiker\OneDrive\Documents\GitHub\ProjectC_renewed\Frontend\obj\Debug
 C:\Users\Gebruiker\OneDrive\Documents\GitHub\ProjectC_renewed\Frontend\obj\Debug\net6.0\Frontend.csproj.CopyComplete
 C:\Users\Gebruiker\OneDrive\Documents\GitHub\ProjectC_renewed\Frontend\obj\Debug\net6.0\Frontend.genruntimeconfig.cache
 C:\Users\Gebruiker\OneDrive\Documents\GitHub\ProjectC_renewed\Frontend\obj\Debug\net6.0\ref\Frontend.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

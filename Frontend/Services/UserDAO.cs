@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Globalization;
-using Npgsql;
 using Testapplication1.Models;
 
 namespace Testapplication1.Services;
@@ -13,7 +9,7 @@ public class UserDAO
     private static string hashedPassword;
     public static Rangers? CurrentRanger;
 
-    public static string FindUser(Rangers ranger)
+    public static Rangers FindUser(Rangers ranger)
     {
 
         using (var context = new DatabaseConnect())
@@ -25,23 +21,12 @@ public class UserDAO
                 select r).FirstOrDefault();
             if (rangerFound == null)
             {
-                return "null";
+                return null;
             }
             else
             {
                 CurrentRanger = rangerFound;
-                if (rangerFound.IsAdmin == true)
-                {
-                    rangerFound.LoggedIn = true;
-                    context.SaveChanges();
-                    return "Admin";
-                }
-                else
-                {
-                    rangerFound.LoggedIn = true;
-                    context.SaveChanges();
-                    return "Ranger";
-                }
+                return rangerFound;
             }
         }
     }
@@ -73,8 +58,8 @@ public class UserDAO
             context.SaveChanges();
         }
     }
-    
-    static string ComputeSha256Hash(string rawData)
+
+    public static string ComputeSha256Hash(string rawData)
     {
         // Create a SHA256   
         using (SHA256 sha256Hash = SHA256.Create())
