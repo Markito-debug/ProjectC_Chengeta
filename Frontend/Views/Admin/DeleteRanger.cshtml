@@ -4,62 +4,6 @@
 @{
     ViewData["Title"] = "DeleteRanger";
 }
-@*<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Ranger</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/styleIndex.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-<div class="row">
-    <form asp-action="ShowResult">
-        <div class="form-group">
-            <label for="Searched" class="control-label"></label>
-            <input name="Searched" class="form-control"/>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Search" style="background: rgb(206, 116, 116); color: #fff" class="button"/>
-        </div>
-    </form>
-</div>
-<h2>List of all rangers</h2>
-
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.RangerName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RangerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                 <a asp-action="ProcessDeleteRanger" style="background: rgb(206, 116, 116); color: #fff" asp-route-id="@item.RangerID">Delete Ranger</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
-<div class="bck_button">
-    <input type="button" value="Back To Admin Screen" style="background: rgb(206, 116, 116); color: #fff" onclick="location.href='@Url.Action("Index", "Admin")'"/>
-</div>
-</body>
-*@
 
 <!DOCTYPE html>
 <html lang="en">

@@ -25,16 +25,26 @@
         <div class="wrapper">
             <i class='bx bx-user-plus'></i>
 
-            @*<input asp-for="Username" placeholder="Username" required />
-            <span asp-validation-for="Username" class="text-danger"></span>*@
             <form asp-action="ProcessAddRanger">
 
                 <h1>Add Ranger</h1>
+
                 <div style="margin-bottom: 15px;">
                     <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
                 </div>
+                @if (TempData["UsernameFlag"] != null)
+                {
+                    <div class="alert-danger" style="padding: 5px;background-color: #f44336;color: white; border-radius: 5px; text-align: center; margin-bottom: 3%;">
+                        @TempData["UsernameFlag"]
+                    </div>
+                }
+                else if (TempData["EmailFlag"] != null)
+                {
+                    <div class="alert-danger" style="padding: 5px;background-color: #f44336;color: white; border-radius: 5px; text-align: center; margin-bottom: 3%;">
+                        @TempData["EmailFlag"]
+                    </div>
+                }
                 <div class="row">
-                    @*<input type="text" placeholder="Name" required>*@
                     <input asp-for="RangerName" placeholder="Ranger Name" required />
                     <span asp-validation-for="RangerName" class="text-danger"></span>
                 </div>
@@ -48,7 +58,7 @@
                     @*<i class='bx bx-hide eye-icon'></i>*@
                 </div>
                 <div class="row">
-                    <input asp-for="PhoneNumber"  type="text" placeholder="PhoneNumber (Optional)" />
+                    <input asp-for="PhoneNumber"  type="number" placeholder="PhoneNumber (Optional)" />
 
                     <span asp-validation-for="PhoneNumber"></span>
                 </div>

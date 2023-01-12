@@ -61,8 +61,25 @@ public class AdminController : Controller
     {
         using (var context = new DatabaseConnect())
         {
-                UserDAO.AddUser(model);
-                return RedirectToAction("Index", "Admin");
+            var ranger = context.Ranger.Where(x => x.Username.ToLower() == model.Username.ToLower()).ToList();
+            var rangerEmail = context.Ranger.Where(x => x.Email.ToLower() == model.Email.ToLower()).ToList();
+            {
+                if (ranger.Count == 0 && rangerEmail.Count == 0)
+                {
+                    UserDAO.AddUser(model);
+                    return RedirectToAction("Index", "Admin");
+                }
+                else if (rangerEmail.Count > 0)
+                {
+                    TempData["EmailFlag"] = "This Email is already registered";
+                    return RedirectToAction("AddRanger", "Admin");
+                }
+                else
+                {
+                    TempData["UsernameFlag"] = "This Username is already in use";
+                    return RedirectToAction("AddRanger", "Admin");
+                }
+            }
         }
     }
     
