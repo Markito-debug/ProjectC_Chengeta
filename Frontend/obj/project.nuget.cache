@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "EfjCBcfnhicWVz1QpH9OFisLuRICCaiuM5Sc8SuYOm73VGpCUA3t31nXuHbu1AdKUr3HoSb9avkJjCEvFnmgjA==",
+  "dgSpecHash": "FuijcC6I+SOm29blpjcnLDToxujHyv++zgeqyg5natFNoVyNxF5zO2Kfjf8MRwmF9VRfX34JqgDJvAmKzszFJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\avien\\source\\repos\\Markito-debug\\ProjectC_renewed\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\avien\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\avien\\.nuget\\packages\\flurl\\3.0.7\\flurl.3.0.7.nupkg.sha512",
+    "C:\\Users\\avien\\.nuget\\packages\\flurl.http\\4.0.0-pre3\\flurl.http.4.0.0-pre3.nupkg.sha512",
     "C:\\Users\\avien\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\avien\\.nuget\\packages\\m2mqtt\\4.3.0\\m2mqtt.4.3.0.nupkg.sha512",
     "C:\\Users\\avien\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.12\\microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",

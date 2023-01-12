@@ -313,3 +313,5 @@ C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\ne
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Flurl.dll
+C:\Users\avien\source\repos\Markito-debug\ProjectC_renewed\Frontend\bin\Debug\net6.0\Flurl.Http.dll

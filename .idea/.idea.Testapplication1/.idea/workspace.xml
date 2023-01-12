@@ -9,53 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="made possible to change status of a notification">
-      <change afterPath="$PROJECT_DIR$/.vs/Testapplication1/FileContentIndex/3b583296-46de-415a-b0f2-9637716e4f69.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Constants.cs" afterDir="false" />
+    <list default="true" id="08073f74-c1ab-41ee-9108-471318901656" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Flurl.Http.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Flurl.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Testapplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/testapplication1.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/testapplication1.metadata.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/testapplication1.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/testapplication1.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Testapplication1/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/FileContentIndex/17d57957-960e-4c4d-baf2-6c0425481070.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/FileContentIndex/19e00679-f94b-46a2-bc10-73c200395ab5.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/FileContentIndex/25383a66-4284-4e2b-b689-d2f6bb3bfb8e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/FileContentIndex/b980b5f6-0a3e-4ddd-9e0a-b427e91f3a9c.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Testapplication1/v17/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Testapplication1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Testapplication1/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/DatabaseConnection/AddInfoToDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DatabaseConnection/AddInfoToDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/DatabaseConnection/DatabaseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DatabaseConnection/DatabaseModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/DatabaseConnection/mqtt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/DatabaseConnection/mqtt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/Backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Backend.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Constants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Controllers/AdminController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Controllers/LoginController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Controllers/NotificationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Controllers/NotificationsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Frontend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Models/DatabaseConnect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Models/DatabaseConnect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Services/SaveNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Services/SaveNotification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Services/UserDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Services/UserDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Views/Admin/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Admin/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Views/Login/LoginFailure.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Login/LoginFailure.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Views/Login/LoginSuccess.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Views/Login/LoginSuccess.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/Frontend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/bin/Debug/net6.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/Frontend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/project.razor.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/project.razor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/ref/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/ref/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/refint/Frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Debug/net6.0/refint/Frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/obj/Frontend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/obj/Frontend.csproj.nuget.dgspec.json" afterDir="false" />
@@ -77,6 +56,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2HaljQgFgzeN5L5ueEDxA7pnhHB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -217,7 +197,8 @@
       <workItem from="1673366860402" duration="1579000" />
       <workItem from="1673371829573" duration="5154000" />
       <workItem from="1673446284179" duration="752000" />
-      <workItem from="1673448832665" duration="4994000" />
+      <workItem from="1673448832665" duration="5034000" />
+      <workItem from="1673541829072" duration="2536000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes to frontend">
       <created>1668594224848</created>
@@ -303,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670246737557</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="security fix partway done, wanted it stored safely">
+      <created>1673465646869</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673465646870</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +325,7 @@
     <MESSAGE value="dumb notification issue fixed" />
     <MESSAGE value="made invalid user and no empty form check" />
     <MESSAGE value="made possible to change status of a notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="made possible to change status of a notification" />
+    <MESSAGE value="security fix partway done, wanted it stored safely" />
+    <option name="LAST_COMMIT_MESSAGE" value="security fix partway done, wanted it stored safely" />
   </component>
 </project>

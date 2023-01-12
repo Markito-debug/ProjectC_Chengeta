@@ -5,6 +5,7 @@ using Testapplication1.Models;
 using Testapplication1.Services;
 
 namespace Testapplication1.Controllers;
+
 [Authorize(Roles = "Admin")]
 public class AdminController : Controller
 {
