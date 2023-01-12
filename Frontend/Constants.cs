@@ -23,7 +23,7 @@ public class CookiesTokenBase
         _flurlClient.BeforeCall(flurlCall => 
         {
             var token = _httpContextAccessor.HttpContext.Request.Cookies[Constants.ChengetaToken];
-            if (!string.IsNullOrWhiteSpace(token))
+            if (token != "")
             {
                 flurlCall.HttpRequestMessage.SetHeader("Authorization", $"bearer {token}");
             }
