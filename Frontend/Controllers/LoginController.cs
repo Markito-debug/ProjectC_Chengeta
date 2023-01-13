@@ -1,10 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Testapplication1.Models;
 using Testapplication1.Services;
-using Testapplication1.Views.Services;
 
 namespace Testapplication1.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         public IActionResult Index()
@@ -12,7 +16,7 @@ namespace Testapplication1.Controllers
             return View();
         }
 
-        public IActionResult ProcessLogin(Rangers model)
+        public async Task<IActionResult> ProcessLogin(Rangers model)
         {
             if (model.Username == null || model.Password == null) 
             {
@@ -21,6 +25,15 @@ namespace Testapplication1.Controllers
             }
             if (UserDAO.FindUser(model)=="Admin")
             {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, UserDAO.CurrentRanger.RangerName),
+                    new Claim(ClaimTypes.Role, "Admin")
+                };
+
+                var claimIdentity = new ClaimsIdentity(claims, "Login");
+                
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal());
                 return RedirectToAction("Index", "Admin");
             } 
             else if (UserDAO.FindUser(model) == "Ranger")

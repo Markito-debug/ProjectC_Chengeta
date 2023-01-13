@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Globalization;
-using Npgsql;
 using Testapplication1.Models;
 
 namespace Testapplication1.Services;

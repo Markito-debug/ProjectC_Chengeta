@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using Npgsql;
 
 namespace Mqttlistener
 {

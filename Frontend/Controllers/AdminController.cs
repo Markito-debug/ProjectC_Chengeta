@@ -1,13 +1,12 @@
-﻿using System.Data;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Testapplication1.Models;
 using Testapplication1.Services;
 
 namespace Testapplication1.Controllers;
 
+[Authorize(Policy = "admin")]
 public class AdminController : Controller
 {
     private readonly ILogger<AdminController> _logger;

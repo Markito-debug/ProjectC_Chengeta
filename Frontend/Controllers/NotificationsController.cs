@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Testapplication1.Models;
 using Testapplication1.Services;
@@ -6,6 +7,7 @@ using Testapplication1.Views.Services;
 
 namespace Testapplication1.Controllers
 {
+    [Authorize(Policy = "IsAdmin,Ranger")]
     public class NotificationsController : Controller
     {
         public IActionResult Index()

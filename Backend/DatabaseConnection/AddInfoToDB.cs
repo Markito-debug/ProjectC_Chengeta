@@ -1,8 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Globalization;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using Npgsql;
 
 namespace Mqttlistener
 {
