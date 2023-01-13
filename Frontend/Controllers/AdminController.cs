@@ -6,7 +6,7 @@ using Testapplication1.Services;
 
 namespace Testapplication1.Controllers;
 
-[Authorize(Policy = "admin")]
+[Authorize(Roles="Admin")]
 public class AdminController : Controller
 {
     private readonly ILogger<AdminController> _logger;

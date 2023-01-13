@@ -33,11 +33,20 @@ namespace Testapplication1.Controllers
 
                 var claimIdentity = new ClaimsIdentity(claims, "Login");
                 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal());
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimIdentity));
                 return RedirectToAction("Index", "Admin");
             } 
             else if (UserDAO.FindUser(model) == "Ranger")
             {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, UserDAO.CurrentRanger.RangerName),
+                    new Claim(ClaimTypes.Role, "Ranger")
+                };
+
+                var claimIdentity = new ClaimsIdentity(claims, "Login");
+                
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimIdentity));
                 return RedirectToAction("Index", "Notifications");
             }
             else
@@ -47,7 +56,7 @@ namespace Testapplication1.Controllers
             }
         }
         
-        public IActionResult ProcessLogout()
+        public async Task<IActionResult> ProcessLogout()
         {
             using (var context = new DatabaseConnect())
             {
@@ -55,6 +64,7 @@ namespace Testapplication1.Controllers
                 ranger.LoggedIn = false;
                 context.SaveChanges();
             }
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Login");
         }
     }

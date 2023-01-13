@@ -7,7 +7,7 @@ using Testapplication1.Views.Services;
 
 namespace Testapplication1.Controllers
 {
-    [Authorize(Policy = "IsAdmin,Ranger")]
+    [Authorize(Roles="Admin,Ranger")]
     public class NotificationsController : Controller
     {
         public IActionResult Index()
