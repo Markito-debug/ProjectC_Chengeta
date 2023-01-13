@@ -8,6 +8,7 @@ using Testapplication1.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DatabaseConnect>();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -52,5 +53,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();
