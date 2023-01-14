@@ -20,7 +20,7 @@ namespace Mqttlistener
         {
             var message = Encoding.UTF8.GetString(e.Message);
             //Mqttlistener.AddListenerInfoToDB.AddJsonToDB(); //Run when database is empty, this is cached sample data saved in ListenerData.json\
-            Mqttlistener.AddListenerInfoToDB.AddToDB(message);
+            AddListenerInfoToDB.AddToDB(message);
         }
 
     }
