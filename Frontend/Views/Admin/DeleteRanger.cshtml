@@ -24,10 +24,10 @@
             <i class='bx bx-user-minus'></i>
 
             <form asp-action="ShowResult">
+                <h1>Delete Ranger</h1>
                 <div style="margin-bottom: 15px;">
                     <a asp-action="Index" type="button" class="bck_button" style="text-decoration: none;"> Back to Home</a>
                 </div>
-                <h1>Delete Ranger</h1>
 
                 <div class="search-bar" style="margin:auto;max-width:300px;">
                     <input type="text" placeholder="Search.." name="Searched">
@@ -38,7 +38,7 @@
                     <table class="content-table">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Username</th>
                                 <th>Email</th>
                                 <th></th>
                             </tr>
@@ -48,7 +48,7 @@
                             {
                                 <tr>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.RangerName)
+                                        @Html.DisplayFor(modelItem => item.Username)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Email)

@@ -64,7 +64,6 @@ body {
 
         .wrapper form .row {
             height: 45px;
-            /* background: #ff000f; */
             margin-bottom: 15px;
             position: relative;
         }
@@ -89,7 +88,6 @@ body {
     width: 20%;
     padding: 10px;
     background: rgb(206, 116, 116);
-    ;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -100,7 +98,7 @@ body {
 
     .search-bar button:hover {
         background: rgb(228, 144, 144);
-        ;
+        
     }
 
 .search-bar::after {

@@ -42,7 +42,7 @@ public class AdminController : Controller
    {
        using (var context = new DatabaseConnect())
        {
-           var searched = context.Ranger.Where(s=>s.RangerName.Contains(Searched) && s.RangerName != UserDAO.CurrentRanger.RangerName).ToList();
+           var searched = context.Ranger.Where(s=>s.RangerName.Contains(Searched) && s.Username != UserDAO.CurrentRanger.Username).ToList();
            return searched != null ?
                View(searched) :
                Problem("No ranger is found.");
